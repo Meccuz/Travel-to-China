@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cina 2026 · 30 ottobre – 16 novembre</title>
+<meta name="description" content="Itinerario del viaggio in Cina: Chongqing, Pechino, Shanxi, Xi'an, Huangshan, Hangzhou, Suzhou, Shanghai.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,500;1,6..72,300&family=Karla:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Serif+SC:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#e4e7e1;
+    --paper-2:#eef0eb;
+    --ink:#171d1a;
+    --ink-soft:#4c5a54;
+    --jade:#3c6b59;
+    --jade-pale:#8fa89b;
+    --seal:#a9332a;
+    --rule:#c3c9c1;
+    --spine:2px;
+    --pad:clamp(1.15rem,5vw,3rem);
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Karla",system-ui,sans-serif;font-size:16px;line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.35;
+    background-image:radial-gradient(circle at 1px 1px,rgba(23,29,26,.13) 1px,transparent 0);
+    background-size:4px 4px;
+  }
+  .wrap{position:relative;z-index:1;max-width:60rem;margin:0 auto;padding:0 var(--pad)}
+  a{color:var(--jade);text-decoration-thickness:1px;text-underline-offset:2px}
+
+  .mono{font-family:"IBM Plex Mono",ui-monospace,monospace}
+  .hanzi{font-family:"Noto Serif SC",serif;font-weight:500}
+
+  /* ---------- hero ---------- */
+  .hero{padding:clamp(2.5rem,9vw,5.5rem) 0 clamp(1.75rem,5vw,3rem);position:relative}
+  .eyebrow{
+    font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--jade);margin:0 0 1.4rem;
+  }
+  .hero h1{
+    font-family:"Newsreader",serif;font-weight:300;
+    font-size:clamp(2.9rem,13vw,6.5rem);line-height:.92;letter-spacing:-.02em;
+    margin:0 0 .6rem;
+  }
+  .hero h1 em{font-style:italic;color:var(--jade)}
+  .hero .dates{
+    font-family:"Newsreader",serif;font-size:clamp(1.05rem,3.4vw,1.5rem);
+    font-weight:300;color:var(--ink-soft);margin:0 0 2rem;
+  }
+  .seal{
+    position:absolute;top:clamp(2.2rem,8vw,5rem);right:0;
+    width:clamp(52px,13vw,74px);aspect-ratio:1;
+    background:var(--seal);color:#f3ece4;border-radius:3px;
+    display:grid;place-items:center;transform:rotate(-4.5deg);
+    font-family:"Noto Serif SC",serif;font-size:clamp(1.1rem,3.4vw,1.55rem);
+    line-height:1.05;text-align:center;letter-spacing:.02em;
+    box-shadow:0 1px 0 rgba(23,29,26,.12);
+  }
+  .routestrip{
+    display:flex;flex-wrap:wrap;align-items:center;gap:.45rem .55rem;
+    border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+    padding:.9rem 0;font-family:"IBM Plex Mono",monospace;
+    font-size:clamp(.78rem,2.9vw,.95rem);
+  }
+  .routestrip b{font-weight:500}
+  .routestrip span{color:var(--jade-pale)}
+  .counter{
+    margin:1.6rem 0 0;font-family:"IBM Plex Mono",monospace;font-size:.78rem;
+    letter-spacing:.13em;text-transform:uppercase;color:var(--ink-soft);
+  }
+  .counter b{color:var(--seal);font-weight:500;font-size:1.05rem}
+
+  /* ---------- sections ---------- */
+  section{padding:clamp(2.6rem,8vw,4.5rem) 0;border-top:1px solid var(--rule)}
+  section:first-of-type{border-top:0}
+  .shead{margin:0 0 1.8rem}
+  .shead h2{
+    font-family:"Newsreader",serif;font-weight:300;letter-spacing:-.01em;
+    font-size:clamp(1.7rem,6vw,2.6rem);margin:0;line-height:1.1;
+  }
+  .shead p{margin:.5rem 0 0;color:var(--ink-soft);max-width:44ch}
+
+  /* ---------- voli ---------- */
+  .flights{display:grid;gap:.7rem}
+  .flight{
+    background:var(--paper-2);border:1px solid var(--rule);border-radius:2px;
+    padding:1rem 1.1rem;display:grid;gap:.55rem;
+  }
+  .flight.hinge{border-left:3px solid var(--seal)}
+  .flight-top{
+    display:flex;justify-content:space-between;align-items:baseline;gap:1rem;
+    font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--ink-soft);
+  }
+  .flight-mid{display:flex;align-items:center;gap:.8rem}
+  .flight-mid .code{
+    font-family:"Newsreader",serif;font-size:clamp(1.5rem,6vw,2rem);font-weight:300;
+    line-height:1;
+  }
+  .flight-mid .arrow{flex:1;border-top:1px dashed var(--jade-pale);position:relative;top:-2px}
+  .flight-bot{
+    display:flex;flex-wrap:wrap;gap:.3rem 1.1rem;
+    font-family:"IBM Plex Mono",monospace;font-size:.8rem;color:var(--ink-soft);
+  }
+  .flight-bot b{color:var(--ink);font-weight:500}
+
+  /* ---------- foto ---------- */
+  .shot{
+    position:relative;margin:.2rem 0 .9rem;aspect-ratio:3/2;
+    background:var(--paper-2);border:1px solid var(--rule);border-radius:2px;
+    overflow:hidden;
+  }
+  .shot::before{
+    content:attr(data-ph);position:absolute;inset:0;display:grid;place-items:center;
+    font-family:"Noto Serif SC",serif;font-size:clamp(2rem,9vw,3.2rem);
+    color:var(--jade-pale);opacity:.5;letter-spacing:.1em;
+  }
+  .shot img{
+    position:relative;width:100%;height:100%;display:block;
+    object-fit:cover;filter:saturate(.88) contrast(1.02);
+  }
+  .shot figcaption{
+    position:absolute;left:0;right:0;bottom:0;z-index:2;
+    padding:.4rem .6rem;background:rgba(23,29,26,.72);color:#e8ebe6;
+    font-family:"IBM Plex Mono",monospace;font-size:.66rem;letter-spacing:.06em;
+  }
+  .shot figcaption span{color:var(--jade-pale)}
+  .shot figcaption a{color:var(--jade-pale);text-decoration:underline}
+
+  /* ---------- timeline / spine ---------- */
+  .timeline{position:relative;padding-left:2.1rem}
+  .timeline::before{
+    content:"";position:absolute;left:5px;top:.55rem;bottom:2.2rem;
+    width:var(--spine);background:var(--jade-pale);
+  }
+  .stop{position:relative;padding:0 0 2.1rem}
+  .stop::before{
+    content:"";position:absolute;left:-2.1rem;top:.42rem;width:12px;height:12px;
+    border-radius:50%;background:var(--paper);border:var(--spine) solid var(--jade);
+  }
+  .stop.air::before{border-color:var(--seal)}
+  .stop.air::after{
+    content:"";position:absolute;left:calc(-2.1rem + 5px);top:1.5rem;bottom:-.4rem;
+    width:var(--spine);background:repeating-linear-gradient(to bottom,var(--seal) 0 5px,transparent 5px 11px);
+  }
+  .stop-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.5rem .7rem;margin-bottom:.15rem}
+  .stop-head .when{
+    font-family:"IBM Plex Mono",monospace;font-size:.73rem;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--jade);
+  }
+  .stop-head .nights{
+    font-family:"IBM Plex Mono",monospace;font-size:.68rem;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--ink-soft);
+    border:1px solid var(--rule);border-radius:99px;padding:.1rem .5rem;
+  }
+  .stop h3{
+    font-family:"Newsreader",serif;font-weight:300;font-size:clamp(1.5rem,5.5vw,2.15rem);
+    margin:0 0 .55rem;line-height:1.08;
+  }
+  .stop h3 .hanzi{
+    font-size:.55em;color:var(--seal);margin-left:.5rem;vertical-align:.12em;
+  }
+  .stop ul{margin:.4rem 0 0;padding-left:1.1rem}
+  .stop li{margin:.28rem 0}
+  .stop li::marker{color:var(--jade-pale)}
+  .note{
+    margin:.85rem 0 0;padding:.6rem .8rem;background:var(--paper-2);
+    border-left:2px solid var(--jade);font-size:.9rem;
+  }
+  .note b{font-weight:700}
+  .note.warn{border-left-color:var(--seal)}
+  .leg{
+    font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--ink-soft);margin:.9rem 0 0;
+    display:flex;align-items:center;gap:.5rem;
+  }
+  .leg::before{content:"";width:1.4rem;border-top:1px solid var(--jade-pale)}
+
+  /* ---------- tabella ---------- */
+  .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table{border-collapse:collapse;width:100%;min-width:32rem;font-size:.88rem}
+  th,td{text-align:left;padding:.6rem .7rem;border-bottom:1px solid var(--rule);vertical-align:top}
+  th{
+    font-family:"IBM Plex Mono",monospace;font-size:.68rem;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--jade);font-weight:500;white-space:nowrap;
+  }
+  td.n{font-family:"IBM Plex Mono",monospace;white-space:nowrap}
+
+  /* ---------- info a griglia ---------- */
+  .grid{display:grid;gap:1.4rem}
+  @media(min-width:44rem){.grid{grid-template-columns:1fr 1fr;gap:1.6rem 2.4rem}}
+  .card h4{
+    font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--jade);margin:0 0 .5rem;font-weight:500;
+  }
+  .card p{margin:0 0 .5rem}
+  .card ul{margin:0;padding-left:1.1rem}
+  .card li{margin:.22rem 0}
+
+  /* ---------- checklist ---------- */
+  .check{list-style:none;margin:0;padding:0;columns:1}
+  @media(min-width:44rem){.check{columns:2;column-gap:2.4rem}}
+  .check li{margin:0 0 .5rem;break-inside:avoid}
+  .check label{display:flex;gap:.6rem;align-items:flex-start;cursor:pointer}
+  .check input{margin-top:.35rem;accent-color:var(--jade);flex:none;width:1rem;height:1rem}
+  .check input:checked+span{color:var(--jade-pale);text-decoration:line-through}
+
+  footer{
+    border-top:1px solid var(--rule);padding:2rem 0 3rem;
+    font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--jade-pale);
+  }
+
+  /* ---------- motion ---------- */
+  .reveal{opacity:0;transform:translateY(10px);transition:opacity .5s ease,transform .5s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+  }
+  :focus-visible{outline:2px solid var(--seal);outline-offset:3px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="seal" aria-hidden="true">中国</div>
+    <p class="eyebrow">Itinerario di viaggio</p>
+    <h1>Cina<br><em>2026</em></h1>
+    <p class="dates">Venerdì 30 ottobre — lunedì 16 novembre · 18 giorni, 8 città</p>
+    <div class="routestrip">
+      <b>MXP</b><span>✈</span><b>CKG</b><span>✈</span><b>PEK</b><span>🚄 · · ·</span><b>PVG</b><span>✈</span><b>SZX</b><span>✈</span><b>MXP</b>
+    </div>
+    <p class="counter" id="counter"></p>
+  </header>
+
+  <section id="voli">
+    <div class="shead">
+      <h2>Voli prenotati</h2>
+      <p>Conferma <span class="mono">C7JXI4</span> · Hainan Airlines. Gli orari sono sempre locali.</p>
+    </div>
+    <div class="flights">
+
+      <article class="flight reveal">
+        <div class="flight-top"><span>Ven 30 ott — sab 31 ott</span><span>HU428 · 11h 05m</span></div>
+        <div class="flight-mid">
+          <span class="code">MXP <span class="mono" style="font-size:.5em">10:55</span></span>
+          <span class="arrow"></span>
+          <span class="code"><span class="mono" style="font-size:.5em">05:00</span> CKG</span>
+        </div>
+        <div class="flight-bot"><span>Milano Malpensa <b>→</b> Chongqing Jiangbei</span><span>arrivo il giorno dopo</span></div>
+      </article>
+
+      <article class="flight reveal">
+        <div class="flight-top"><span>Sab 31 ott</span><span>2h 25m</span></div>
+        <div class="flight-mid">
+          <span class="code">CKG <span class="mono" style="font-size:.5em">15:15</span></span>
+          <span class="arrow"></span>
+          <span class="code"><span class="mono" style="font-size:.5em">17:40</span> PEK</span>
+        </div>
+        <div class="flight-bot"><span>Chongqing <b>→</b> Pechino</span><span>scalo a terra <b>10h 15m</b></span></div>
+      </article>
+
+      <article class="flight hinge reveal">
+        <div class="flight-top"><span>Dom 15 nov</span><span>2h 30m</span></div>
+        <div class="flight-mid">
+          <span class="code">PVG <span class="mono" style="font-size:.5em">20:30</span></span>
+          <span class="arrow"></span>
+          <span class="code"><span class="mono" style="font-size:.5em">23:00</span> SZX</span>
+        </div>
+        <div class="flight-bot"><span>Shanghai Pudong <b>→</b> Shenzhen</span><span>Maglev da Longyang Road, 8 min</span></div>
+      </article>
+
+      <article class="flight reveal">
+        <div class="flight-top"><span>Lun 16 nov</span><span>12h 55m</span></div>
+        <div class="flight-mid">
+          <span class="code">SZX <span class="mono" style="font-size:.5em">01:45</span></span>
+          <span class="arrow"></span>
+          <span class="code"><span class="mono" style="font-size:.5em">07:40</span> MXP</span>
+        </div>
+        <div class="flight-bot"><span>Shenzhen <b>→</b> Milano Malpensa</span><span>coincidenza a Shenzhen <b>2h 45m</b></span></div>
+      </article>
+
+    </div>
+    <p class="note warn"><b>Resta da verificare una cosa sola:</b> se i quattro voli sono su un unico biglietto. Se sì, i bagagli viaggiano fino a Milano e la coincidenza di 2h45 a Shenzhen è protetta; se no, va ricontrollata.</p>
+  </section>
+
+  <section id="itinerario">
+    <div class="shead">
+      <h2>Giorno per giorno</h2>
+      <p>La linea continua è treno, quella tratteggiata in rosso è aereo.</p>
+    </div>
+
+    <div class="timeline">
+
+      <article class="stop air reveal">
+        <div class="stop-head"><span class="when">Sab 31 ott · 05:00–13:00</span><span class="nights">mezza giornata</span></div>
+        <h3>Chongqing <span class="hanzi">重庆</span></h3>
+        <figure class="shot" data-ph="重庆"
+          data-file="202308 Hongya Cave at night from Qiansimen Bridge.jpg"
+          data-author="Jonashtand" data-license="CC BY-SA 4.0">
+          <img src="img/chongqing.jpg" alt="Hongyadong sul Yangtze" decoding="async" onerror="this.remove()">
+          <figcaption>Hongyadong sul Yangtze <span>· foto: —</span></figcaption>
+        </figure>
+        <ul>
+          <li>Uscita dall'aeroporto verso le 06:15, metro linea 10 + 3 fino a Jiefangbei (~45 min).</li>
+          <li>Hongyadong all'alba, quando è ancora vuota, poi la terrazza sul Yangtze.</li>
+          <li>Il monorotaia che entra nel palazzo alla stazione di Liziba.</li>
+          <li>Colazione con <em>xiaomian</em>, i noodles piccanti locali, in un vicolo qualsiasi.</li>
+          <li>Rientro in aeroporto entro le 13:15.</li>
+        </ul>
+        <p class="note"><b>Realisticamente sono 5 ore in città</b>, non 10. Deposito bagagli al terminal o in stazione: non portarli in giro. Se Chongqing ti interessa davvero, vedi le note finali — ci sarebbe un modo per farne due giorni.</p>
+        <p class="leg">Volo CKG → PEK · 2h 25m</p>
+      </article>
+
+      <article class="stop reveal">
+        <div class="stop-head"><span class="when">Sab 31 ott – mer 4 nov</span><span class="nights">4 notti</span></div>
+        <h3>Pechino <span class="hanzi">北京</span></h3>
+        <figure class="shot" data-ph="北京"
+          data-file="The Forbidden City - View from Coal Hill.jpg"
+          data-author="Pixelflake" data-license="CC BY-SA 3.0">
+          <img src="img/pechino.jpg" alt="La Città Proibita da Jingshan" loading="lazy" decoding="async" onerror="this.remove()">
+          <figcaption>La Città Proibita da Jingshan <span>· foto: —</span></figcaption>
+        </figure>
+        <ul>
+          <li><b>Sab 31:</b> arrivo alle 17:40, check-in, cena leggera. Niente di più.</li>
+          <li><b>Dom 1:</b> Tiananmen, Città Proibita, tramonto dalla collina di Jingshan.</li>
+          <li><b>Lun 2:</b> Grande Muraglia — Mutianyu se vuoi la funivia, Jinshanling se vuoi camminare da solo per ore.</li>
+          <li><b>Mar 3:</b> Tempio del Cielo la mattina, Tempio dei Lama, poi hutong intorno alla Torre del Tamburo.</li>
+          <li><b>Mer 4:</b> Palazzo d'Estate e Xiangshan — inizio novembre è il picco del foliage.</li>
+        </ul>
+        <p class="note warn"><b>Città Proibita:</b> prenotazione nominativa obbligatoria online, si apre 7 giorni prima e va esaurita in poche ore. Serve il numero di passaporto.</p>
+        <p class="leg">Treno Pechino → Datong · ~2h</p>
+      </article>
+
+      <article class="stop reveal">
+        <div class="stop-head"><span class="when">Gio 5 – ven 6 nov</span><span class="nights">1 notte</span></div>
+        <h3>Datong <span class="hanzi">大同</span></h3>
+        <figure class="shot" data-ph="大同">
+          <img src="img/datong.jpg" alt="Grotte di Yungang" loading="lazy" decoding="async" onerror="this.remove()">
+          <figcaption>Grotte di Yungang <span>· foto: —</span></figcaption>
+        </figure>
+        <ul>
+          <li>Grotte di Yungang: 51.000 statue buddiste scavate nella roccia nel V secolo.</li>
+          <li>Il Monastero Sospeso di Hengshan, incastrato nella parete di una gola.</li>
+          <li>Se resta tempo: la pagoda di legno di Yingxian, in piedi dal 1056 senza un chiodo.</li>
+        </ul>
+        <p class="leg">Treno Datong → Pingyao · ~3h</p>
+      </article>
+
+      <article class="stop reveal">
+        <div class="stop-head"><span class="when">Ven 6 – dom 8 nov</span><span class="nights">2 notti</span></div>
+        <h3>Pingyao <span class="hanzi">平遥</span></h3>
+        <figure class="shot" data-ph="平遥">
+          <img src="img/pingyao.jpg" alt="Le mura Ming" loading="lazy" decoding="async" onerror="this.remove()">
+          <figcaption>Le mura Ming <span>· foto: —</span></figcaption>
+        </figure>
+        <ul>
+          <li>Una città Ming completa dentro le sue mura, da percorrere a piedi senza programma.</li>
+          <li>La prima banca della Cina (Rishengchang) e il tribunale imperiale.</li>
+          <li>Giro sulle mura all'alba, prima dei pullman.</li>
+          <li>Dimore dei mercanti Qiao o Wang nei dintorni, mezza giornata.</li>
+        </ul>
+        <p class="note">Dormire in una <em>guesthouse</em> dentro le mura, in un cortile tradizionale. Fuori non ha senso.</p>
+        <p class="leg">Treno Pingyao → Xi'an · ~3h</p>
+      </article>
+
+      <article class="stop reveal">
+        <div class="stop-head"><span class="when">Dom 8 – mar 10 nov</span><span class="nights">2 notti</span></div>
+        <h3>Xi'an <span class="hanzi">西安</span></h3>
+        <figure class="shot" data-ph="西安"
+          data-file="Terracotta Army, View of Pit 1.jpg"
+          data-author="Jmhullot" data-license="CC BY 3.0">
+          <img src="img/xian.jpg" alt="Esercito di Terracotta" loading="lazy" decoding="async" onerror="this.remove()">
+          <figcaption>Esercito di Terracotta <span>· foto: —</span></figcaption>
+        </figure>
+        <ul>
+          <li><b>Dom 8:</b> arrivo nel pomeriggio, bicicletta sulle mura al tramonto, cena nel Quartiere Musulmano.</li>
+          <li><b>Lun 9:</b> Esercito di Terracotta la mattina presto, terme di Huaqing nel pomeriggio.</li>
+          <li><b>Mar 10:</b> Museo di Storia dello Shaanxi, Grande Pagoda dell'Oca Selvatica, poi treno.</li>
+        </ul>
+        <p class="leg">Treno Xi'an → Huangshan Nord · ~6h</p>
+      </article>
+
+      <article class="stop reveal">
+        <div class="stop-head"><span class="when">Mar 10 – gio 12 nov</span><span class="nights">2 notti</span></div>
+        <h3>Huangshan <span class="hanzi">黄山</span></h3>
+        <figure class="shot" data-ph="黄山"
+          data-file="Pic dans la brume - HuangShan.jpg"
+          data-author="Stephane.janel" data-license="CC BY-SA 3.0">
+          <img src="img/huangshan.jpg" alt="Il mare di nuvole all'alba" loading="lazy" decoding="async" onerror="this.remove()">
+          <figcaption>Il mare di nuvole all'alba <span>· foto: —</span></figcaption>
+        </figure>
+        <ul>
+          <li><b>Mar 10:</b> arrivo a Tunxi in serata, notte in basso, vicolo antico di Tunxi.</li>
+          <li><b>Mer 11:</b> salita alle Montagne Gialle, cammino sulle creste, <b>notte in cima</b>.</li>
+          <li><b>Gio 12:</b> alba dal Beihai, discesa, eventuale sosta a Hongcun sulla strada.</li>
+        </ul>
+        <p class="note warn"><b>L'hotel in cima va prenotato appena possibile</b>: sono pochi, costosi e si riempiono. È l'unico modo per vedere l'alba sopra il mare di nuvole. In cima a novembre si sta vicino allo zero con vento.</p>
+        <p class="leg">Treno Huangshan → Hangzhou · ~1h 30m</p>
+      </article>
+
+      <article class="stop reveal">
+        <div class="stop-head"><span class="when">Gio 12 – sab 14 nov</span><span class="nights">2 notti</span></div>
+        <h3>Hangzhou <span class="hanzi">杭州</span></h3>
+        <figure class="shot" data-ph="杭州"
+          data-file="West Lake IMG 8755 hangzhou panorama.jpg"
+          data-author="Bjoertvedt" data-license="CC BY-SA 4.0">
+          <img src="img/hangzhou.jpg" alt="Il Lago dell'Ovest" loading="lazy" decoding="async" onerror="this.remove()">
+          <figcaption>Il Lago dell'Ovest <span>· foto: —</span></figcaption>
+        </figure>
+        <ul>
+          <li><b>Gio 12:</b> arrivo nel pomeriggio, riva nord del Lago dell'Ovest al tramonto.</li>
+          <li><b>Ven 13:</b> il lago in bici fino alla diga di Su, tempio di Lingyin e grotte di Feilai Feng.</li>
+          <li>Piantagioni di tè Longjing a Meijiawu: camminata tra le colline e sosta a bere.</li>
+          <li><b>Sab 14:</b> treno del mattino, si arriva a Shanghai verso le 11.</li>
+        </ul>
+        <p class="leg">Treno Hangzhou → Shanghai · ~1h</p>
+      </article>
+
+      <article class="stop air reveal">
+        <div class="stop-head"><span class="when">Sab 14 – dom 15 nov</span><span class="nights">2 notti</span></div>
+        <h3>Shanghai <span class="hanzi">上海</span></h3>
+        <figure class="shot" data-ph="上海"
+          data-file="Shanghai skyline waterfront pudong 5166168 69 70.jpg"
+          data-author="Ermell" data-license="CC0">
+          <img src="img/shanghai.jpg" alt="Il Bund e lo skyline di Pudong" loading="lazy" decoding="async" onerror="this.remove()">
+          <figcaption>Il Bund e lo skyline di Pudong <span>· foto: —</span></figcaption>
+        </figure>
+        <ul>
+          <li><b>Sab 14, pomeriggio:</b> Concessione Francese a piedi — Wukang Road, i platani, le case coloniali — poi Tianzifang o Xintiandi.</li>
+          <li><b>Sab 14, sera:</b> il Bund quando si accendono le luci, e la sponda opposta vista dalla passeggiata di Pudong.</li>
+          <li><b>Dom 15, mattina:</b> il Bund all'alba, pieno di gente che fa tai chi e vuoto di turisti. Poi giardino Yuyuan e città vecchia.</li>
+          <li><b>Dom 15, pomeriggio:</b> a scelta — Museo di Shanghai East a Pudong, il Power Station of Art in riva al fiume, o M50 se preferisci le gallerie.</li>
+          <li>Bagagli in hotel, partenza verso le 17:30.</li>
+        </ul>
+        <p class="note">Adesso Shanghai ha un pomeriggio, una sera e un giorno pieno: abbastanza per attraversarla davvero. Il prezzo è Suzhou, uscita dal programma — vedi le note finali.</p>
+        <p class="note warn"><b>Per Pudong:</b> metro linea 2 fino a Longyang Road, poi Maglev — 430 km/h, otto minuti. Circa un'ora in tutto dal centro. Con il volo alle 20:30, fuori dall'hotel entro le 17:30.</p>
+        <p class="leg">Volo PVG → SZX · 2h 30m</p>
+      </article>
+
+      <article class="stop air reveal">
+        <div class="stop-head"><span class="when">Dom 15 · 23:00 – lun 16 · 01:45</span><span class="nights">solo transito</span></div>
+        <h3>Shenzhen <span class="hanzi">深圳</span></h3>
+        <ul>
+          <li>Sbarco alle 23:00, ripartenza alle 01:45. Nessuna uscita dall'aeroporto.</li>
+          <li>Se i bagagli non sono imbarcati fino a Milano, vanno ritirati e riconsegnati: da fare di corsa.</li>
+        </ul>
+        <p class="leg">Volo SZX → MXP · 12h 55m · arrivo lun 16 alle 07:40</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="treni">
+    <div class="shead">
+      <h2>Treni da prenotare</h2>
+      <p>Le vendite aprono circa 15 giorni prima della partenza. Serve il passaporto, lo stesso che userai per salire a bordo.</p>
+    </div>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>Data</th><th>Tratta</th><th>Stazioni</th><th>Durata</th><th>Nota</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="n">5 nov</td><td>Pechino → Datong</td><td class="n">Beijing Bei → Datong Nan</td><td class="n">~1h50</td><td>Partire presto per avere il pomeriggio a Yungang</td></tr>
+          <tr><td class="n">6 nov</td><td>Datong → Pingyao</td><td class="n">Datong Nan → Pingyao Gucheng</td><td class="n">~2h30</td><td>Treno serale</td></tr>
+          <tr><td class="n">8 nov</td><td>Pingyao → Xi'an</td><td class="n">Pingyao Gucheng → Xi'an Bei</td><td class="n">~2h45</td><td>Metro dalla stazione Nord al centro</td></tr>
+          <tr><td class="n">10 nov</td><td>Xi'an → Huangshan</td><td class="n">Xi'an Bei → Huangshan Bei</td><td class="n">~6h</td><td>La tratta più lunga: prenota posto finestrino</td></tr>
+          <tr><td class="n">12 nov</td><td>Huangshan → Hangzhou</td><td class="n">Huangshan Bei → Hangzhou Dong</td><td class="n">~1h30</td><td>Dopo la discesa dalla montagna</td></tr>
+          <tr><td class="n">14 nov</td><td>Hangzhou → Shanghai</td><td class="n">Hangzhou Dong → Shanghai Hongqiao</td><td class="n">~1h</td><td>Corse continue: si può anche prendere all'ultimo</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Si prenota su <b>Trip.com</b> (interfaccia in italiano, piccola commissione) o direttamente su <b>Railway 12306</b>, l'app ufficiale, che ora accetta passaporti stranieri e carte estere. Con 12306 paghi meno ma la registrazione richiede pazienza.</p>
+  </section>
+
+  <section id="pratico">
+    <div class="shead">
+      <h2>Cose da sapere</h2>
+    </div>
+    <div class="grid">
+
+      <div class="card reveal">
+        <h4>Visto</h4>
+        <p>Nessun visto. Fino al 31 dicembre 2026 i passaporti ordinari italiani entrano in Cina senza visto per soggiorni fino a 30 giorni, turismo incluso. Il viaggio ne dura 18.</p>
+        <p>Il passaporto deve avere almeno <b>6 mesi di validità residua</b>. Prima dell'arrivo si compila la <b>carta d'arrivo digitale</b>, che ha sostituito il modulo di carta.</p>
+      </div>
+
+      <div class="card reveal">
+        <h4>Pagamenti</h4>
+        <ul>
+          <li>Alipay e WeChat Pay accettano carte estere: <b>configurali e provali dall'Italia</b>, non all'arrivo.</li>
+          <li>Il QR code è il metodo normale ovunque, anche dal fruttivendolo.</li>
+          <li>Porta 1.000–1.500 CNY in contanti come rete di sicurezza.</li>
+        </ul>
+      </div>
+
+      <div class="card reveal">
+        <h4>Internet</h4>
+        <ul>
+          <li>Una <b>eSIM in roaming</b> risolve tutto: il traffico esce dalla Cina e Google, WhatsApp e Maps funzionano senza VPN.</li>
+          <li>In alternativa, VPN installata e testata <b>prima</b> di partire: dalla Cina non si scarica.</li>
+          <li>Amap o Baidu Maps per muoversi davvero, Didi per i taxi.</li>
+        </ul>
+      </div>
+
+      <div class="card reveal">
+        <h4>Meteo, inizio novembre</h4>
+        <ul>
+          <li>Pechino e Shanxi: 2–15 °C, secco, cielo spesso limpido.</li>
+          <li>Xi'an: 4–16 °C.</li>
+          <li>Cima di Huangshan: intorno a 0 °C con vento, possibile ghiaccio.</li>
+          <li>Hangzhou e Shanghai: 10–19 °C, umido.</li>
+          <li>Shenzhen: oltre 20 °C — un cambio leggero in bagaglio a mano.</li>
+        </ul>
+      </div>
+
+      <div class="card reveal">
+        <h4>Bagaglio</h4>
+        <p>Sette spostamenti in treno con la valigia: <b>uno zaino o un trolley piccolo</b> vale più di qualunque comodità in più. Strati, guscio antivento per la montagna, scarpe già rotte.</p>
+      </div>
+
+      <div class="card reveal">
+        <h4>Prenotazioni a scadenza</h4>
+        <ul>
+          <li>Città Proibita: 7 giorni prima, esatti.</li>
+          <li>Hotel in cima a Huangshan: <b>adesso</b>.</li>
+          <li>Museo di Storia dello Shaanxi: slot gratuiti da prenotare.</li>
+          <li>Treni: 15 giorni prima.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="aperto">
+    <div class="shead">
+      <h2>Ancora da decidere</h2>
+      <p>I nodi veri, in ordine di urgenza.</p>
+    </div>
+    <div class="grid">
+      <div class="card reveal">
+        <h4>Chongqing merita di più?</h4>
+        <p>Cinque ore sono un assaggio. Se la città ti interessa, l'alternativa è restare due notti e raggiungere Pechino con un altro mezzo. <b>Ma non si salta un volo di un biglietto unico</b>: farebbe cancellare tutti i segmenti successivi. Prima si verifica se il CKG→PEK è una prenotazione separata, poi si valuta.</p>
+      </div>
+      <div class="card reveal">
+        <h4>Shanxi o montagna?</h4>
+        <p>Datong e Pingyao sono quattro giorni di Cina antica e poco turistica. Huangshan sono due giorni di paesaggio. Il piano attuale tiene entrambe e per questo corre. Tagliandone una, tutto il resto respira.</p>
+      </div>
+      <div class="card reveal">
+        <h4>Otto città in diciotto giorni</h4>
+        <p>Restano sei giorni con uno spostamento dentro. Funziona se ti piace muoverti; se preferisci fermarti, il prossimo candidato al taglio è <b>Datong</b>: si guadagnerebbero due giorni, da dare a Pechino o a Xi'an.</p>
+      </div>
+      <div class="card reveal">
+        <h4>Suzhou, se ti dispiace</h4>
+        <p>È a mezz'ora di treno da Shanghai, quindi resta recuperabile come gita in giornata senza valigie: si parte alle 8, giardino dell'Umile Amministratore all'apertura, Pingjiang Road nel pomeriggio, rientro per cena. Costa un giorno, e l'unico da cui prenderlo sarebbe Hangzhou.</p>
+      </div>
+      <div class="card reveal">
+        <h4>Alternative non incluse</h4>
+        <p>Luoyang e le grotte di Longmen tra Xi'an e l'est; Zhangjiajie al posto di Huangshan; il borgo d'acqua di Zhujiajiao come mezza giornata da Shanghai; l'oasi di Dunhuang se il viaggio si spostasse verso ovest.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="checklist">
+    <div class="shead">
+      <h2>Prima di partire</h2>
+      <p>Le caselle si svuotano ricaricando la pagina.</p>
+    </div>
+    <ul class="check">
+      <li><label><input type="checkbox"><span>Verificare se i voli sono su biglietto unico</span></label></li>
+      <li><label><input type="checkbox"><span>Passaporto valido oltre maggio 2027</span></label></li>
+      <li><label><input type="checkbox"><span>Alipay configurato e testato</span></label></li>
+      <li><label><input type="checkbox"><span>eSIM acquistata</span></label></li>
+      <li><label><input type="checkbox"><span>VPN installata come riserva</span></label></li>
+      <li><label><input type="checkbox"><span>Hotel in cima a Huangshan prenotato</span></label></li>
+      <li><label><input type="checkbox"><span>Hotel: Pechino, Datong, Pingyao, Xi'an, Tunxi, Hangzhou, Shanghai</span></label></li>
+      <li><label><input type="checkbox"><span>Treni prenotati (6 tratte)</span></label></li>
+      <li><label><input type="checkbox"><span>Città Proibita: sveglia 7 giorni prima</span></label></li>
+      <li><label><input type="checkbox"><span>Assicurazione sanitaria</span></label></li>
+      <li><label><input type="checkbox"><span>Adattatore presa tipo A/I</span></label></li>
+      <li><label><input type="checkbox"><span>Copia digitale dei documenti</span></label></li>
+      <li><label><input type="checkbox"><span>Carta d'arrivo digitale, il giorno prima</span></label></li>
+    </ul>
+  </section>
+
+  <footer>
+    Aggiornato il 30 luglio 2026 · rev. 2 · Conferma C7JXI4
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  var partenza = new Date(2026,9,30,10,55);
+  var el = document.getElementById('counter');
+  function tick(){
+    var giorni = Math.ceil((partenza - new Date())/86400000);
+    if(giorni > 1){ el.innerHTML = 'Partenza tra <b>' + giorni + '</b> giorni'; }
+    else if(giorni === 1){ el.innerHTML = 'Si parte <b>domani</b>'; }
+    else if(giorni === 0){ el.innerHTML = 'Si parte <b>oggi</b>'; }
+    else { el.innerHTML = 'Viaggio in corso, o già finito'; }
+  }
+  tick(); setInterval(tick, 60000);
+
+
+  // Foto da Wikimedia Commons: src e credito generati dai data-attribute,
+  // cosi il credito non puo mai finire su una foto sbagliata.
+  document.querySelectorAll('.shot[data-file]').forEach(function(fig){
+    var file = fig.getAttribute('data-file');
+    var img = fig.querySelector('img');
+    var cap = fig.querySelector('figcaption');
+    if(!img || !cap) return;
+    var enc = encodeURIComponent(file.replace(/ /g,'_'));
+    img.src = 'https://commons.wikimedia.org/wiki/Special:FilePath/' + enc + '?width=1200';
+    var author = fig.getAttribute('data-author') || 'autore da indicare';
+    var lic = fig.getAttribute('data-license') || 'licenza da indicare';
+    var page = 'https://commons.wikimedia.org/wiki/File:' + enc;
+    cap.innerHTML = cap.firstChild.textContent.trim() +
+      ' <span>· ' + author + ', ' + lic +
+      ', <a href="' + page + '" rel="noopener" target="_blank">Wikimedia Commons</a></span>';
+  });
+
+  var items = document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    items.forEach(function(i){ i.classList.add('in'); });
+    return;
+  }
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); }
+    });
+  },{rootMargin:'0px 0px -8% 0px'});
+  items.forEach(function(i){ obs.observe(i); });
+})();
+</script>
+</body>
+</html>
