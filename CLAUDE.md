@@ -11,8 +11,12 @@ serve a non ripartire da zero.
 |---|---|
 | `index.html` | Il sito. Tutto qui: HTML, CSS e JS in un unico file |
 | `FOTO.md` | Come collegare le foto da Wikimedia Commons |
-| `alternativa-nord.html` | Versione precedente dell'itinerario, tenuta come riferimento |
 | `CLAUDE.md` | Questo file |
+| `.claudeignore` | Vuoto, creato per errore da uno hook. Da riempire o togliere |
+
+La versione precedente dell'itinerario (rotta nord: Shanxi, Huangshan, Hangzhou, Suzhou)
+non è più un file: viveva in `index-old.html`, cancellato con il commit `de6ec00`. Se
+serve, si recupera dalla storia con `git show 6404213:index-old.html`.
 
 ## Vincoli fissi — non modificabili
 
@@ -87,9 +91,12 @@ info pratiche, cose ancora da decidere, checklist. Niente framework, niente buil
 i titoli, Karla per il testo, IBM Plex Mono per i dati (orari, codici volo, tabelle),
 Noto Serif SC per gli ideogrammi.
 
-L'elemento firma è la **linea verticale della timeline**: continua e verde per i treni,
-tratteggiata e rossa per gli aerei. La classe `.stop.air` cambia il tratto. Non
-aggiungere altri elementi decorativi: la sobrietà è voluta.
+L'elemento firma è la **linea verticale della timeline**: continua e verde per gli
+spostamenti di superficie (treni, crociera sul fiume Li), tratteggiata e rossa per i voli.
+La classe `.stop.air` cambia il tratto e va sulla tappa **da cui parte** la tratta, non su
+quella in cui arriva. Va riverificata ogni volta che l'itinerario cambia mezzo: era
+sbagliata su tre tappe su otto. Non aggiungere altri elementi decorativi: la sobrietà
+è voluta.
 
 **Da non usare:** `localStorage` e `sessionStorage` non funzionano nell'anteprima
 artifact di Claude. La checklist è volutamente senza persistenza.

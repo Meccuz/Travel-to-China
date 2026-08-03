@@ -1,0 +1,8 @@
+# Roba binaria o generata: inutile nel contesto di Claude, costa solo token.
+img/
+assets/fonts/
+*.jpg
+*.jpeg
+*.png
+*.woff
+*.woff2

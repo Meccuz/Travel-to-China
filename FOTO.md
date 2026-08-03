@@ -61,6 +61,9 @@ sulla rotta nord, sono già verificate:
 
 ## Alternativa: file locali
 
-Se preferisci non dipendere da Commons, togli `data-file` e metti l'immagine in `img/`
-con il nome che il tag ha già nel `src` (`img/pechino.jpg`, `img/xian.jpg`, ecc.).
+Se preferisci non dipendere da Commons, togli `data-file` e correggi il `src` dell'`<img>`.
+Attenzione: oggi tutti e otto i riquadri puntano allo stesso segnaposto inesistente
+(`img/x.jpg`), che il browser scarta via `onerror` facendo comparire l'ideogramma — quindi
+il nome giusto va scritto a mano, non è già nel tag. Metti il file in `img/` e usa quel
+nome nel `src` (`img/pechino.jpg`, `img/xian.jpg`, ecc.).
 Ritaglio 3:2, JPEG qualità 80, sotto i 300 kB. È anche la strada per le tue foto al ritorno.
