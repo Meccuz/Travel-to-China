@@ -1,6 +1,10 @@
 /* Font locali: fonts.googleapis.com e fonts.gstatic.com sono bloccati in Cina.
    Solo subset latin, che copre tutto l'italiano. Di Noto Serif SC i soli
-   18 ideogrammi usati nel sito: 上中京北国圳安庆成朔林桂海深西都重阳 */
+   20 ideogrammi che il sito mostra davvero: 上中京北国圳安庆成朔林桂海深西都重阳
+   piu' 王计, il nome dell'autore di una foto.
+   Se aggiungi un ideogramma visibile va rigenerato il subset, altrimenti il
+   browser ricade su un font di sistema: chiedi a fonts.googleapis.com il
+   css2 di Noto+Serif+SC con &text= e la lista completa dei glifi. */
 @font-face {
   font-family: 'Newsreader';
   font-style: italic;
@@ -71,5 +75,5 @@
   font-weight: 500;
   font-display: swap;
   src: url('fonts/notoserifsc-1.woff2') format('woff2');
-  unicode-range: U+4e0a, U+4e2d, U+4eac, U+5317, U+56fd, U+5733, U+5b89, U+5e86, U+6210, U+6714, U+6797, U+6842, U+6d77, U+6df1, U+897f, U+90fd, U+91cd, U+9633;
+  unicode-range: U+4e0a, U+4e2d, U+4eac, U+5317, U+56fd, U+5733, U+5b89, U+5e86, U+6210, U+6714, U+6797, U+6842, U+6d77, U+6df1, U+738b, U+897f, U+8ba1, U+90fd, U+91cd, U+9633;
 }
