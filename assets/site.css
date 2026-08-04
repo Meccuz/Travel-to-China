@@ -121,6 +121,8 @@
     padding:.4rem .6rem;background:rgba(23,29,26,.72);color:#e8ebe6;
     font-family:"IBM Plex Mono",monospace;font-size:.66rem;letter-spacing:.06em;
   }
+  /* Se il file manca, onerror toglie l'img: senza foto anche il credito sparisce. */
+  .shot:not(:has(img)) figcaption{display:none}
   .shot figcaption span{color:var(--jade-pale)}
   .shot figcaption a{color:var(--jade-pale);text-decoration:underline}
 

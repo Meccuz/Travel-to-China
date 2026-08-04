@@ -11,18 +11,17 @@
   tick(); setInterval(tick, 60000);
 
 
-  // Foto da Wikimedia Commons: src e credito generati dai data-attribute,
-  // cosi il credito non puo mai finire su una foto sbagliata.
+  // I file stanno in img/, ma il credito nasce dai data-attribute della figura:
+  // e' lo stesso dato da cui viene il nome su Commons, quindi non puo finire
+  // sulla foto sbagliata. Il link all'originale non si apre dalla Cina, dove
+  // Commons e' bloccato: resta perche' la licenza CC lo chiede.
   document.querySelectorAll('.shot[data-file]').forEach(function(fig){
-    var file = fig.getAttribute('data-file');
-    var img = fig.querySelector('img');
     var cap = fig.querySelector('figcaption');
-    if(!img || !cap) return;
-    var enc = encodeURIComponent(file.replace(/ /g,'_'));
-    img.src = 'https://commons.wikimedia.org/wiki/Special:FilePath/' + enc + '?width=1200';
+    if(!cap) return;
     var author = fig.getAttribute('data-author') || 'autore da indicare';
     var lic = fig.getAttribute('data-license') || 'licenza da indicare';
-    var page = 'https://commons.wikimedia.org/wiki/File:' + enc;
+    var page = 'https://commons.wikimedia.org/wiki/File:' +
+      encodeURIComponent(fig.getAttribute('data-file').replace(/ /g,'_'));
     cap.innerHTML = cap.firstChild.textContent.trim() +
       ' <span>· ' + author + ', ' + lic +
       ', <a href="' + page + '" rel="noopener" target="_blank">Wikimedia Commons</a></span>';

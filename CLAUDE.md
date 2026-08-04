@@ -109,18 +109,21 @@ artifact di Claude. La checklist è volutamente senza persistenza.
 Ogni tappa ha un `<figure class="shot">` con un `data-ph` che contiene l'ideogramma
 della città: è il segnaposto che si vede quando la foto manca.
 
-Per collegare una foto servono tre attributi:
+I file stanno in `img/` e il sito li serve da sé: Commons è bloccato in Cina, quindi
+una foto in hotlink sarebbe un riquadro vuoto proprio dove serve. I tre attributi
+restano, ma servono solo al credito:
 
 ```html
 <figure class="shot" data-ph="成都"
   data-file="Nome File Su Commons.jpg"
   data-author="NomeUtente" data-license="CC BY-SA 4.0">
+  <img src="img/chengdu-panda.jpg" alt="..." loading="lazy" decoding="async" onerror="this.remove()">
 ```
 
-Lo script in fondo alla pagina costruisce da sé l'URL via
-`https://commons.wikimedia.org/wiki/Special:FilePath/` e genera la didascalia col
-credito e il link alla pagina Commons. Il credito nasce dallo stesso dato del file,
-quindi non può finire sulla foto sbagliata: **non scrivere le didascalie a mano**.
+`assets/site.js` legge i `data-*` e genera la didascalia col credito e il link alla
+pagina Commons; l'immagine arriva dal `src`. Il credito nasce dallo stesso dato del
+nome file, quindi non può finire sulla foto sbagliata: **non scrivere le didascalie
+a mano**. Se il file manca, `onerror` toglie l'`<img>` e il CSS nasconde la didascalia.
 
 Regole che valgono sempre:
 
@@ -128,11 +131,15 @@ Regole che valgono sempre:
   e i link si rompono.
 - L'autore va verificato sulla pagina del file, non indovinato. CC BY e CC BY-SA lo
   richiedono. Se non riesci a verificarlo, **lascia il segnaposto** invece di inventarlo.
-- Controlla che il soggetto sia davvero quello: nomi generici tipo "Sea of Clouds
-  Sunrise" possono essere di un altro continente. È già capitato.
+- **Guarda la foto prima di usarla.** Il nome non basta: la prima scelta per Chengdu
+  si chiamava `Chengdu Research Base of Giant Panda Breeding, 201907, 01.jpg` ed era
+  il cancello d'ingresso con una folla di turisti, senza un panda. I nomi generici tipo
+  "Sea of Clouds Sunrise" possono essere di un altro continente.
+- La didascalia dice solo quello che si può dimostrare. Se le categorie del file non
+  confermano il luogo esatto, scrivi quello confermato e non di più.
 
-Alternativa: togliere `data-file` e mettere il file in `img/` col nome che sta già nel
-`src`. Ritaglio 3:2, JPEG qualità 80, sotto i 300 kB.
+Formato: ritaglio 3:2, 1500×1000, JPEG sotto i 300 kB. Dettagli e tabella dei file
+in `FOTO.md`.
 
 ## Tono dei testi
 

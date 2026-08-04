@@ -1,69 +1,75 @@
 # Foto del sito
 
-Ci sono otto riquadri, uno per tappa. Quattro sono collegati a Wikimedia Commons,
-quattro sono vuoti e mostrano l'ideogramma della città.
+Le foto stanno in `img/`, servite dal sito stesso. **Non sono collegate a Wikimedia:**
+Commons è bloccato in Cina dal 2019, quindi una foto in hotlink sarebbe un riquadro
+vuoto proprio nel posto dove ti serve.
 
-## Collegare una foto: una riga
+Vengono comunque da Commons, e il credito è obbligatorio.
 
-Cerca il luogo su commons.wikimedia.org, apri la pagina del file e copia tre cose
-nel tag `<figure>` corrispondente in `index.html`:
+## Le tre attributi restano, ma servono solo al credito
 
 ```html
-<figure class="shot" data-ph="上海"
-  data-file="The Bund Shanghai.jpg"
-  data-author="NomeUtente" data-license="CC BY-SA 4.0">
+<figure class="shot" data-ph="成都"
+  data-file="Ailuropoda melanoleuca 熊貓 panda - panoramio.jpg"
+  data-author="lienyuan lee" data-license="CC BY 3.0">
+  <img src="img/chengdu-panda.jpg" alt="Un panda gigante mangia bambù" loading="lazy" decoding="async" onerror="this.remove()">
+  <figcaption>Un panda gigante a Chengdu <span>· foto: —</span></figcaption>
+</figure>
 ```
 
-Il sito costruisce da sé l'indirizzo dell'immagine e la didascalia col credito e il link
-alla pagina originale. Non serve scaricare nulla né creare la cartella `img/`.
-Il credito viene generato dallo stesso dato del file, quindi non può finire sulla foto sbagliata.
+`assets/site.js` legge i `data-*` e scrive la didascalia col credito e il link alla
+pagina Commons. L'immagine invece arriva dal `src`, che punta al file locale.
 
-**Le tre cose da copiare dalla pagina Commons:**
+Quel link non si apre dalla Cina, ma resta: le licenze CC BY e CC BY-SA vogliono
+l'attribuzione e la fonte. **Non scrivere le didascalie a mano** — nascono dallo stesso
+dato del nome file, così il credito non può finire sulla foto sbagliata.
 
-- `data-file` — il nome del file, quello dopo `File:` nel titolo della pagina
-- `data-author` — l'autore, sotto "Author" nella scheda del file
-- `data-license` — es. `CC BY-SA 4.0`, `CC BY 2.0`, `Pubblico dominio`
+Se `img/` perde un file, `onerror` toglie l'`<img>` e il CSS nasconde la didascalia:
+resta il riquadro con l'ideogramma di `data-ph`.
 
-L'autore va indicato davvero: le licenze CC BY e CC BY-SA lo richiedono. Le foto in
-pubblico dominio no, ma citarlo è comunque buona educazione.
+## Aggiungere una foto
 
-## Già collegate
+1. Cerca su commons.wikimedia.org e **apri la pagina del file**.
+2. Copia autore e licenza da lì. Non indovinarli: se non riesci a verificarli,
+   lascia il segnaposto.
+3. Scarica l'originale, ritaglia 3:2, ridimensiona a 1500×1000, JPEG sotto i 300 kB.
+4. Salvala in `img/` con un nome `tappa-soggetto.jpg`.
+5. Metti `src`, `data-file`, `data-author`, `data-license` nel `<figure>`.
 
-| Tappa | Autore | Licenza | File su Commons |
+### Guarda la foto prima di usarla
+
+Il nome non è una garanzia. La prima foto scelta per Chengdu si chiamava
+`Chengdu Research Base of Giant Panda Breeding, 201907, 01.jpg` ed era il **cancello
+d'ingresso** con una folla di turisti: nessun panda. Ci vuole un colpo d'occhio, non
+solo il nome.
+
+I nomi generici sono il caso peggiore. La foto del panda che c'è adesso si chiama
+`Ailuropoda melanoleuca 熊貓 panda - panoramio.jpg`: senza luogo nel titolo. Le
+categorie dicono `Chengdu Zoo` e le coordinate 30.733 / 104.146, quindi il panda è
+a Chengdu — ma non si può stabilire se sia la base di ricerca o lo zoo, e la didascalia
+dice solo quello che si può dimostrare.
+
+## Le foto attuali
+
+| File in `img/` | Autore | Licenza | Nome su Commons |
 |---|---|---|---|
-| Chongqing | Jonashtand | CC BY-SA 4.0 | 202308 Hongya Cave at night from Qiansimen Bridge.jpg |
-| Pechino | Pixelflake | CC BY-SA 3.0 | The Forbidden City - View from Coal Hill.jpg |
-| Xi'an | Jmhullot | CC BY 3.0 | Terracotta Army, View of Pit 1.jpg |
-| Shanghai | Ermell | CC0 | Shanghai skyline waterfront pudong 5166168 69 70.jpg |
+| `chongqing-hongyadong.jpg` | Jonashtand | CC BY-SA 4.0 | 202308 Hongya Cave at night from Qiansimen Bridge.jpg |
+| `pechino-cittaproibita.jpg` | Pixelflake | CC BY-SA 3.0 | The Forbidden City - View from Coal Hill.jpg |
+| `xian-terracotta.jpg` | Jmhullot | CC BY 3.0 | Terracotta Army, View of Pit 1.jpg |
+| `chengdu-panda.jpg` | lienyuan lee | CC BY 3.0 | Ailuropoda melanoleuca 熊貓 panda - panoramio.jpg |
+| `guilin-collina.jpg` | N509FZ | CC BY-SA 4.0 | Guilin Elephant Hill at night (20240217201207).jpg |
+| `yangshuo-fiumeli.jpg` | Chinatravelsavvy | CC BY-SA 3.0 | Li River at Xingping 1.jpg |
+| `shanghai-pudong.jpg` | Lloyd Tudor | CC BY-SA 4.0 | Pudong skyline at dusk.jpg |
 
-## Ancora da collegare
+Tutti e sette i nomi sono stati verificati contro l'API di Commons: esistono.
 
-Le nuove tappe della rotta kimkim non hanno ancora una foto:
+**Non ancora usata:** `leshan-buddha.jpg` (王计, CC BY 2.5,
+`Leshan Giant Buddha, 20161102.jpg`) aspetta la pagina di tappa di Chengdu.
 
-| Tappa | Categoria Commons da aprire |
-|---|---|
-| Chengdu | Category:Chengdu Research Base of Giant Panda Breeding |
-| Guilin | Category:Li River |
-| Yangshuo | Category:Yangshuo County |
-| Shenzhen | (transito notturno, si può lasciare vuota) |
+**Shenzhen non ha foto di proposito.** È un transito notturno in aeroporto: una
+skyline lì venderebbe una cosa che non farai.
 
-Apri la categoria, scegli la foto, entra nella sua pagina e copia i tre campi.
+## Le tue foto al ritorno
 
-## Non più in uso
-
-Queste due erano collegate nella versione precedente dell'itinerario. Se torni
-sulla rotta nord, sono già verificate:
-
-| Tappa | Autore | Licenza | File |
-|---|---|---|---|
-| Huangshan | Stephane.janel | CC BY-SA 3.0 | Pic dans la brume - HuangShan.jpg |
-| Hangzhou | Bjoertvedt | CC BY-SA 4.0 | West Lake IMG 8755 hangzhou panorama.jpg |
-
-## Alternativa: file locali
-
-Se preferisci non dipendere da Commons, togli `data-file` e correggi il `src` dell'`<img>`.
-Attenzione: oggi tutti e otto i riquadri puntano allo stesso segnaposto inesistente
-(`img/x.jpg`), che il browser scarta via `onerror` facendo comparire l'ideogramma — quindi
-il nome giusto va scritto a mano, non è già nel tag. Metti il file in `img/` e usa quel
-nome nel `src` (`img/pechino.jpg`, `img/xian.jpg`, ecc.).
-Ritaglio 3:2, JPEG qualità 80, sotto i 300 kB. È anche la strada per le tue foto al ritorno.
+Stessa strada: `img/`, ritaglio 3:2, sotto i 300 kB. Togli i tre `data-*` e la
+didascalia resta quella scritta nel `<figcaption>`, senza credito.
