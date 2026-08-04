@@ -9,10 +9,16 @@ serve a non ripartire da zero.
 
 | File | Ruolo |
 |---|---|
-| `index.html` | Il sito. Tutto qui: HTML, CSS e JS in un unico file |
-| `FOTO.md` | Come collegare le foto da Wikimedia Commons |
+| `index.html` | La home: voli, itinerario, abbigliamento, luce, checklist, appunti |
+| `tappe/*.html` | Una pagina per tappa, sei in tutto. Shenzhen non ne ha: è un transito |
+| `assets/site.css` | Tutto il CSS del sito |
+| `assets/site.js` | Contatore, crediti foto, note in localStorage, fade-up |
+| `assets/fonts.css` | `@font-face` locali. Il subset di Noto Serif SC sta qui |
+| `assets/fonts/` | Nove woff2, 425 kB |
+| `img/` | Le foto, 3:2 a 1500×1000, sotto i 300 kB l'una |
+| `FOTO.md` | Da dove vengono le foto e come aggiungerne |
 | `CLAUDE.md` | Questo file |
-| `.claudeignore` | Vuoto, creato per errore da uno hook. Da riempire o togliere |
+| `.claudeignore` | Esclude binari e font dal contesto |
 
 La versione precedente dell'itinerario (rotta nord: Shanxi, Huangshan, Hangzhou, Suzhou)
 non è più un file: viveva in `index-old.html`, cancellato con il commit `de6ec00`. Se
@@ -71,7 +77,7 @@ Non riproporre queste cose senza che Michele le rimetta in discussione.
 - **Falso allarme corretto:** la crociera sul fiume Li in magra riguarda dicembre–marzo,
   non novembre. Novembre è tra i mesi migliori.
 - **Chongqing:** lo scalo di 10 ore vale circa 4 ore utili, non 10. Il sole sorge verso
-  le 07:15 e prima è buio, con le luci di Hongyadong spente. Non vendere lo scalo come
+  le 07:05 e prima è buio, con le luci di Hongyadong spente. Non vendere lo scalo come
   più di quello che è.
 
 ## Ancora aperto
@@ -79,17 +85,28 @@ Non riproporre queste cose senza che Michele le rimetta in discussione.
 1. **Muraglia:** Mutianyu (comoda, funivia, affollata) o Jinshanling (3 ore da Pechino,
    tratti non restaurati, quasi deserta). Non deciso.
 2. **Il giorno recuperato da Longji:** ora a Chengdu, l'alternativa è Yangshuo.
-3. **Foto:** 4 tappe su 8 collegate. Mancano Chengdu, Guilin, Yangshuo, Shenzhen.
+3. **Panjiayuan è in programma di martedì, e il mercato vero è quello del fine
+   settimana.** In settimana resta una frazione delle bancarelle, e l'unico slot
+   alternativo è la domenica della Città Proibita. Probabilmente da togliere.
+4. **Alloggi:** nessuna delle sei città ha un hotel scelto. È il buco più grande.
 
 ## Convenzioni del sito
 
-**Struttura.** Un unico `index.html`. Sezioni: hero, voli, itinerario, spostamenti,
-info pratiche, cose ancora da decidere, checklist. Niente framework, niente build.
+**Struttura.** `index.html` più una pagina per tappa in `tappe/`, che condividono
+`assets/site.css` e `assets/site.js`. Niente framework, niente build. I percorsi sono
+**sempre relativi**: il sito sta in una sottocartella di GitHub Pages, quindi un
+percorso che inizia con `/` si rompe. Dalle pagine di tappa si sale con `../`.
 
-**Design.** Palette carta/celadon/cinabro definita nelle variabili CSS in cima al file:
-`--paper`, `--ink`, `--jade`, `--seal`, `--rule`. Font da Google Fonts: Newsreader per
-i titoli, Karla per il testo, IBM Plex Mono per i dati (orari, codici volo, tabelle),
-Noto Serif SC per gli ideogrammi.
+**Design.** Palette carta/celadon/cinabro definita nelle variabili CSS in cima a
+`assets/site.css`: `--paper`, `--ink`, `--jade`, `--seal`, `--rule`. Font self-hostati
+in `assets/fonts/`: Newsreader per i titoli, Karla per il testo, IBM Plex Mono per i
+dati (orari, codici volo, tabelle), Noto Serif SC per gli ideogrammi.
+
+**Il font cinese è un subset di venti glifi.** `fonts.css` dichiara solo gli ideogrammi
+che il sito mostra davvero. Se ne aggiungi uno **visibile** va rigenerato il subset,
+altrimenti quel carattere cade su un font di sistema. Quelli dentro `data-file` non
+contano: non vengono mai disegnati. Per controllare, cerca `[一-鿿]` nelle
+pagine e confronta con la lista in `fonts.css`.
 
 L'elemento firma è la **linea verticale della timeline**: continua e verde per gli
 spostamenti di superficie (treni, crociera sul fiume Li), tratteggiata e rossa per i voli.
@@ -98,8 +115,11 @@ quella in cui arriva. Va riverificata ogni volta che l'itinerario cambia mezzo: 
 sbagliata su tre tappe su otto. Non aggiungere altri elementi decorativi: la sobrietà
 è voluta.
 
-**Da non usare:** `localStorage` e `sessionStorage` non funzionano nell'anteprima
-artifact di Claude. La checklist è volutamente senza persistenza.
+**localStorage.** Su GitHub Pages funziona, e ci vivono la checklist (`cina2026:check:<k>`)
+e le note di ogni pagina (`cina2026:nota:<id>`). Vale solo su quel dispositivo e in quel
+browser: **ogni punto in cui si scrive lo dice all'utente**, perché una nota di viaggio
+che sembra sincronizzata e non lo è fa danno. In navigazione privata l'accesso può
+lanciare un'eccezione: `site.js` lo prova una volta e degrada disabilitando la textarea.
 
 **Motion.** Solo un fade-up allo scroll via IntersectionObserver, con rispetto di
 `prefers-reduced-motion`. Non aggiungerne altro.
@@ -151,5 +171,9 @@ Evita l'entusiasmo da brochure.
 ## Pubblicare
 
 Il sito è servito da GitHub Pages sul branch `main`, cartella root. Ogni push va
-online in un paio di minuti. Prima di committare, apri `index.html` nel browser e
+online in un paio di minuti. Prima di committare, apri il sito da un server locale
+(`python -m http.server`, non `file://`, altrimenti i percorsi relativi ingannano) e
 controlla su una larghezza da telefono: il layout è pensato mobile-first.
+
+Vale la pena controllare anche una pagina di tappa e non solo la home: hanno percorsi
+`../` e sono quelle che si rompono per prime.

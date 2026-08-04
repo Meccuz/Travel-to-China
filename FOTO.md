@@ -63,8 +63,12 @@ dice solo quello che si può dimostrare.
 
 Tutti e sette i nomi sono stati verificati contro l'API di Commons: esistono.
 
-**Non ancora usata:** `leshan-buddha.jpg` (王计, CC BY 2.5,
-`Leshan Giant Buddha, 20161102.jpg`) aspetta la pagina di tappa di Chengdu.
+L'ottava è `leshan-buddha.jpg` (王计, CC BY 2.5, `Leshan Giant Buddha, 20161102.jpg`),
+che sta nella pagina di tappa di Chengdu e non in home.
+
+**Se aggiungi un autore con un nome in ideogrammi**, ricordati che la didascalia lo
+mostra: quei caratteri vanno aggiunti al subset di `assets/fonts.css`, altrimenti
+cadono su un font di sistema. È già capitato con 王计.
 
 **Shenzhen non ha foto di proposito.** È un transito notturno in aeroporto: una
 skyline lì venderebbe una cosa che non farai.
