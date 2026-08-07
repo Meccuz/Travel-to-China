@@ -59,7 +59,7 @@ Deriva da un itinerario kimkim "Classic China Family Trip 15 days", adattato.
 | 11 – 15 nov | Shanghai | 4 |
 | 15 nov, notte | Shenzhen (transito) | — |
 
-Spostamenti: treni Pechino–Xi'an e Xi'an–Chengdu; voli Chengdu–Guilin e
+Spostamenti: treni Pechino–Xi'an, Xi'an–Chengdu e Chengdu–Guilin; volo
 Guilin–Shanghai; crociera sul fiume Li da Guilin a Yangshuo.
 
 ## Decisioni già prese, con la ragione
@@ -79,6 +79,11 @@ Non riproporre queste cose senza che Michele le rimetta in discussione.
 - **Chongqing:** lo scalo di 10 ore vale circa 4 ore utili, non 10. Il sole sorge verso
   le 07:05 e prima è buio, con le luci di Hongyadong spente. Non vendere lo scalo come
   più di quello che è.
+- **Chengdu–Guilin è in treno, non in aereo.** L'alta velocità copre la tratta in 5–7 ore
+  via Chongqing e Guiyang, con una ventina di partenze al giorno da Chengdu East a Guilin
+  North. Un precedente appunto parlava di 9 ore di treno: era sbagliato. Niente notturno:
+  l'unico cuccetta sulla linea è il Guangzhou–Chengdu, che passa da Guilin nel cuore
+  della notte.
 
 ## Ancora aperto
 
