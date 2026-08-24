@@ -255,3 +255,78 @@
     .reveal{opacity:1;transform:none;transition:none}
   }
   :focus-visible{outline:2px solid var(--seal);outline-offset:3px}
+
+  /* ---------- sezione privata ---------- */
+  .lock{max-width:28rem}
+  .lock > label,.campo label{
+    display:block;font-family:"IBM Plex Mono",monospace;font-size:.68rem;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--jade);
+    margin:0 0 .45rem;font-weight:500;
+  }
+  .lock input[type=password]{
+    width:100%;padding:.7rem .8rem;background:var(--paper-2);color:var(--ink);
+    border:1px solid var(--rule);border-radius:2px;
+    font-family:"IBM Plex Mono",monospace;font-size:1rem;letter-spacing:.06em;
+  }
+  .lock input[type=password]:focus{border-color:var(--jade);outline:none}
+  .lock input[type=password]:disabled{opacity:.6;cursor:not-allowed}
+  .lock-bar{
+    display:flex;align-items:center;gap:.9rem;flex-wrap:wrap;margin:.9rem 0 0;
+  }
+  .lock-bar button{
+    font-family:"IBM Plex Mono",monospace;font-size:.68rem;
+    letter-spacing:.12em;text-transform:uppercase;
+    background:none;border:1px solid var(--rule);border-radius:2px;
+    padding:.45rem .9rem;color:var(--jade);cursor:pointer;
+  }
+  .lock-bar button:hover{border-color:var(--jade)}
+  .lock-keep{
+    display:flex;align-items:center;gap:.4rem;
+    font-size:.85rem;color:var(--ink-soft);cursor:pointer;
+  }
+  .lock-keep input:disabled{cursor:not-allowed}
+  .lock-stato{
+    margin:.8rem 0 0;min-height:1.2em;
+    font-family:"IBM Plex Mono",monospace;font-size:.72rem;
+    letter-spacing:.08em;color:var(--ink-soft);
+  }
+  .lock-stato.ko{color:var(--seal)}
+
+  /* Un indirizzo cinese e' la cosa che si mostra al tassista: deve rendersi
+     sempre. Il subset di Noto Serif SC copre venti glifi e non puo' bastare per
+     un indirizzo qualunque, quindi qui si usa di proposito il font di sistema,
+     che sui telefoni c'e' sempre. E' una deroga voluta alla regola del subset,
+     non una dimenticanza. */
+  .cn{
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",
+                "Noto Sans CJK SC","Source Han Sans SC",sans-serif;
+    font-size:1.1rem;line-height:1.45;
+  }
+
+  .pnome{
+    font-family:"Newsreader",serif;font-size:1.25rem;font-weight:400;
+    line-height:1.25;margin:0 0 .7rem;
+  }
+  .dl{margin:0}
+  .dl dt{
+    font-family:"IBM Plex Mono",monospace;font-size:.62rem;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--jade-pale);margin:.7rem 0 .1rem;
+  }
+  .dl dd{margin:0}
+  .dl dd.mono{font-size:.95rem}
+
+  .campo{margin:1.6rem 0 0;max-width:44rem}
+  .campo textarea{
+    width:100%;min-height:11rem;resize:vertical;
+    padding:.8rem .9rem;background:var(--paper-2);color:var(--ink);
+    border:1px solid var(--rule);border-radius:2px;
+    font-family:"IBM Plex Mono",monospace;font-size:.85rem;line-height:1.5;
+  }
+  .campo textarea:focus{border-color:var(--jade);outline:none}
+  .campo textarea[readonly]{color:var(--ink-soft)}
+  .passi{margin:0;padding-left:1.3rem;max-width:44ch}
+  .passi li{margin:.5rem 0}
+  code.mono{
+    background:var(--paper-2);padding:.08em .3em;border-radius:2px;font-size:.9em;
+  }
+  .nulla{margin:0;color:var(--seal);font-size:.9rem;font-style:italic}

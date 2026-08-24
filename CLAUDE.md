@@ -13,6 +13,14 @@ serve a non ripartire da zero.
 | `tappe/*.html` | Una pagina per tappa, sei in tutto. Shenzhen non ne ha: è un transito |
 | `assets/site.css` | Tutto il CSS del sito |
 | `assets/site.js` | Contatore, crediti foto, note in localStorage, fade-up |
+| `privato.html` | Sezione riservata: chiede la passphrase e mostra le prenotazioni |
+| `cifra.html` | Attrezzo locale: cifra il JSON in chiaro. Non contiene dati |
+| `assets/privato.js` | AES-GCM, PBKDF2 e il rendering delle prenotazioni |
+| `privato/dati.enc.json` | Il testo cifrato. È l'unico file di dati che si committa |
+| `privato/dati.local.json` | Il file in chiaro. **In `.gitignore`, non esiste su GitHub** |
+| `privato/dati.esempio.json` | Il modello da copiare, con lo schema dei campi |
+| `robots.txt` | Tiene `privato.html` e `cifra.html` fuori dai motori di ricerca |
+| `.gitignore` | Impedisce che il file in chiaro finisca in un commit |
 | `assets/fonts.css` | `@font-face` locali. Il subset di Noto Serif SC sta qui |
 | `assets/fonts/` | Nove woff2, 425 kB |
 | `img/` | Le foto, 3:2 a 1500×1000, sotto i 300 kB l'una |
@@ -94,6 +102,65 @@ Non riproporre queste cose senza che Michele le rimetta in discussione.
    settimana.** In settimana resta una frazione delle bancarelle, e l'unico slot
    alternativo è la domenica della Città Proibita. Probabilmente da togliere.
 4. **Alloggi:** nessuna delle sei città ha un hotel scelto. È il buco più grande.
+
+## La sezione privata
+
+Hotel, treni e voli interni stanno in `privato.html`, fuori dalle pagine pubbliche.
+
+**Perché è cifrata e non protetta da password.** Il sito è statico e il repo è
+pubblico: non esiste nessun server che possa rifiutare una richiesta. Una password
+controllata in JavaScript non protegge niente, basta guardare il sorgente. Quindi
+il dato viene cifrato con **AES-256-GCM**, chiave derivata dalla passphrase con
+**PBKDF2-SHA256, 600 000 iterazioni**. Il blob può stare pubblico su GitHub:
+senza la passphrase è rumore. Tutta la sicurezza sta nella passphrase.
+
+GCM autentica oltre a cifrare, e questo dà due cose gratis: una passphrase
+sbagliata fa fallire la decifratura da sé, senza nessun valore di controllo
+separato da aggirare, e nessuno può modificare il blob per far mostrare alla
+pagina qualcosa che non abbiamo scritto noi.
+
+**Perché non Cloudflare Access o simili.** L'autenticazione vera lato server
+sarebbe più forte, ma dipende dal raggiungere un servizio terzo e dal ricevere
+una mail con un codice. Dalla Cina è una scommessa, esattamente come per le foto
+di Commons. La decifratura nel browser non ha bisogno di niente oltre alla pagina
+già caricata.
+
+**Il giro da fare per aggiornare i dati:**
+
+1. Modifica `privato/dati.local.json` (in chiaro, sul tuo computer).
+2. Apri `cifra.html` da un server locale, incolla il JSON, metti **la stessa
+   passphrase di sempre**, premi *Cifra*.
+3. Salva l'uscita in `privato/dati.enc.json` e committa **solo quello**.
+
+**Le trappole, in ordine di gravità:**
+
+- **Il file in chiaro non va mai committato, nemmeno una volta.** Il repo è
+  pubblico e la storia di git non dimentica: un codice di prenotazione committato
+  per errore resta leggibile con `git show` anche dopo che lo cancelli. Rimediare
+  vuol dire riscrivere la storia e cambiare tutte le prenotazioni. `.gitignore`
+  copre `*.local.json`, ma `git status` prima di ogni commit resta d'obbligo.
+- **Se cambia la passphrase, il vecchio blob non si apre più.** Non c'è recupero:
+  nessun server sa chi sei.
+- Serve **https oppure localhost**: `crypto.subtle` non esiste in contesto
+  insicuro, e su `file://` non funziona nemmeno il fetch del blob.
+- Le schede sono generate dopo lo sblocco, quindi **non possono usare `.reveal`**:
+  `site.js` osserva solo gli elementi presenti al caricamento, e una scheda con
+  `.reveal` resterebbe a `opacity:0`, cioè invisibile.
+
+**Deroga voluta alla regola del subset dei font.** Gli indirizzi in cinese
+(`indirizzoCn`, `stazioniCn`) sono la cosa che si mostra al tassista: devono
+rendersi sempre, e nessun subset di venti glifi può coprire un indirizzo
+qualunque. La classe `.cn` usa di proposito il font di sistema, che sui telefoni
+c'è sempre. Non è una dimenticanza e non va "corretta" rigenerando il subset.
+
+**La passphrase non si scrive qui.** Questo file è committato su un repo pubblico:
+annotarla accanto al meccanismo che chiude vanificherebbe tutto. Vive nel gestore
+di password di Michele e da nessun'altra parte.
+
+**Nota di stato.** `privato/dati.enc.json` contiene il modello, non prenotazioni
+vere: al 24 agosto 2026 nessuno dei sei hotel è scelto, e treni e volo interno non
+sono comprati. La pagina è pronta, i dati mancano. Man mano che si confermano si
+riempie `dati.local.json` e si rifà il giro con `cifra.html`.
 
 ## Convenzioni del sito
 

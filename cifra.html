@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cifra i dati · Cina 2026</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<div class="wrap">
+
+  <p class="crumb"><a href="privato.html">← Prenotazioni</a></p>
+
+  <header class="hero">
+    <p class="eyebrow">Attrezzo · non contiene dati</p>
+    <h1>Cifra</h1>
+    <p class="dates">Il JSON in chiaro entra qui, il blob da committare esce da sotto.</p>
+  </header>
+
+  <section id="cifra">
+
+    <div class="shead">
+      <h2>Come si usa</h2>
+      <p>Tre passaggi, in locale. Questa pagina non manda niente da nessuna parte:
+      la cifratura avviene nel browser.</p>
+    </div>
+
+    <ol class="passi">
+      <li>Apri <code class="mono">privato/dati.local.json</code>, aggiorna quello che è
+      cambiato e incolla tutto il contenuto nel campo qui sotto. Quel file è in
+      <code class="mono">.gitignore</code>: resta sul tuo computer.</li>
+      <li>Metti la passphrase — <b>la stessa di sempre</b>, altrimenti il vecchio blob
+      non si apre più — e premi <i>Cifra</i>.</li>
+      <li>Salva il risultato in <code class="mono">privato/dati.enc.json</code> e committa
+      solo quello.</li>
+    </ol>
+
+    <p class="note warn"><b>Il file in chiaro non va mai committato.</b> Il repo è pubblico
+    e la storia di git non dimentica: un codice di prenotazione committato per sbaglio
+    resta leggibile con <code class="mono">git show</code> anche dopo che lo cancelli.
+    Prima di ogni commit, <code class="mono">git status</code>.</p>
+
+    <form id="cifra-form" autocomplete="off">
+
+      <div class="campo">
+        <label for="cifra-chiaro">JSON in chiaro</label>
+        <textarea id="cifra-chiaro" spellcheck="false"
+                  placeholder='{ "hotel": [ … ], "treni": [ … ], "voli": [ … ] }'></textarea>
+      </div>
+
+      <div class="campo lock">
+        <label for="cifra-pass">Passphrase</label>
+        <input type="password" id="cifra-pass" autocomplete="new-password"
+               autocapitalize="off" autocorrect="off" spellcheck="false">
+      </div>
+
+      <div class="campo lock">
+        <label for="cifra-pass2">Ripetila</label>
+        <input type="password" id="cifra-pass2" autocomplete="new-password"
+               autocapitalize="off" autocorrect="off" spellcheck="false">
+      </div>
+
+      <div class="lock-bar">
+        <button type="submit">Cifra</button>
+        <button type="button" id="cifra-copia" hidden>Copia</button>
+        <button type="button" id="cifra-scarica" hidden>Scarica</button>
+      </div>
+
+      <p id="cifra-stato" class="lock-stato" role="status" aria-live="polite"></p>
+
+      <div class="campo">
+        <label for="cifra-out">Da mettere in privato/dati.enc.json</label>
+        <textarea id="cifra-out" class="mono" readonly spellcheck="false"></textarea>
+      </div>
+
+    </form>
+
+    <p class="note"><b>Sulla passphrase.</b> Tutta la sicurezza sta lì: il resto è
+    matematica pubblica. Quattro o cinque parole senza senso insieme valgono più di una
+    parola con i numeri al posto delle lettere, e si ricordano meglio. Niente date del
+    viaggio, niente <i>cina2026</i>.</p>
+
+  </section>
+
+  <footer>
+    <p>Cina 2026 · <a href="index.html">itinerario</a> · <a href="privato.html">prenotazioni</a></p>
+  </footer>
+
+</div>
+<script src="assets/privato.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+# La pagina delle prenotazioni e il suo attrezzo non vanno indicizzati. Non e'
+# una protezione (chiunque puo' scaricare il blob), ma tenerli fuori dai
+# risultati di ricerca evita curiosi di passaggio. La difesa vera e' la
+# cifratura di privato/dati.enc.json.
+User-agent: *
+Disallow: /privato.html
+Disallow: /cifra.html
+Disallow: /privato/

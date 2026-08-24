@@ -1,0 +1,9 @@
+# Il file in chiaro con hotel, treni e codici di prenotazione non entra MAI nel
+# repo. Il repo e' pubblico e la storia di git non si dimentica niente: un
+# commit sbagliato resta recuperabile con git show anche dopo la cancellazione.
+# Nel repo va solo il testo cifrato, privato/dati.enc.json.
+privato/*.local.json
+*.local.json
+
+# Artefatti di crash di Git Bash / MSYS
+*.stackdump

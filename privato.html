@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prenotazioni · Cina 2026</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<div class="wrap">
+
+  <p class="crumb"><a href="index.html">← Tutto l'itinerario</a></p>
+
+  <header class="hero">
+    <p class="eyebrow">Riservato · hotel, treni, voli interni</p>
+    <h1>Prenotazioni</h1>
+    <p class="dates">Codici, indirizzi e orari. Cifrati: servono la passphrase e nient'altro.</p>
+  </header>
+
+  <section id="privato" data-src="privato/dati.enc.json">
+
+    <form id="lock-form" class="lock" autocomplete="off">
+      <label for="lock-pass">Passphrase</label>
+      <input type="password" id="lock-pass" autocomplete="current-password"
+             autocapitalize="off" autocorrect="off" spellcheck="false" inputmode="text">
+      <div class="lock-bar">
+        <button type="submit">Sblocca</button>
+        <label class="lock-keep">
+          <input type="checkbox" id="lock-ricorda">
+          resta aperta in questa scheda
+        </label>
+      </div>
+      <p id="lock-stato" class="lock-stato" role="status" aria-live="polite"></p>
+
+      <p class="note"><b>Come funziona.</b> Il file su GitHub è cifrato con AES-256-GCM.
+      Chiunque può scaricarlo, nessuno può leggerlo: la chiave nasce dalla passphrase
+      qui sopra e non è scritta da nessuna parte. Se la passphrase è sbagliata la
+      decifratura fallisce e non vedi niente — non c'è nessun controllo da aggirare.</p>
+
+      <p class="note warn"><b>Se dimentichi la passphrase, questi dati sono persi.</b>
+      Non esiste recupero: non c'è nessun server che sappia chi sei. Tieni una copia
+      offline sul telefono — uno screenshot o un PDF — perché una pagina cifrata a
+      mezzanotte a Yangshuo, senza rete e senza passphrase, non serve a niente.</p>
+    </form>
+
+    <p class="lock-bar"><button type="button" id="lock-blocca" hidden>Richiudi</button></p>
+
+    <div id="privato-dati"></div>
+
+  </section>
+
+  <footer>
+    <p>Cina 2026 · <a href="index.html">torna all'itinerario</a> · <a href="cifra.html">aggiorna i dati</a></p>
+  </footer>
+
+</div>
+<script src="assets/site.js" defer></script>
+<script src="assets/privato.js" defer></script>
+</body>
+</html>

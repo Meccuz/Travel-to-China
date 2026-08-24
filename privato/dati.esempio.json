@@ -1,0 +1,108 @@
+{
+  "_come_si_usa": [
+    "Copia questo file in privato/dati.local.json e riempilo con i dati veri.",
+    "dati.local.json e' in .gitignore: resta sul tuo computer, non finisce su GitHub.",
+    "Poi apri cifra.html, incolla il contenuto, e salva l'uscita in privato/dati.enc.json.",
+    "Ogni campo e' opzionale: quelli vuoti o assenti non vengono mostrati, quindi",
+    "puoi riempire una prenotazione alla volta man mano che confermi.",
+    "Le chiavi che iniziano con _ sono commenti: il sito le ignora."
+  ],
+
+  "aggiornato": "24 agosto 2026",
+
+  "hotel": [
+    {
+      "citta": "Pechino",
+      "nome": "Nome dell'hotel",
+      "checkin": "31 ottobre",
+      "checkout": "3 novembre",
+      "notti": 3,
+      "indirizzo": "Via e numero, quartiere, Pechino",
+      "indirizzoCn": "北京市…",
+      "telefono": "+86 10 0000 0000",
+      "codice": "ABC123456",
+      "prezzo": "€ 000 totali",
+      "link": "https://www.booking.com/...",
+      "note": "Metro piu' vicina, orario del check-in, colazione compresa o no."
+    },
+    {
+      "citta": "Xi'an",
+      "nome": "",
+      "checkin": "3 novembre",
+      "checkout": "5 novembre",
+      "notti": 2
+    },
+    {
+      "citta": "Chengdu",
+      "nome": "",
+      "checkin": "5 novembre",
+      "checkout": "8 novembre",
+      "notti": 3
+    },
+    {
+      "citta": "Guilin",
+      "nome": "",
+      "checkin": "8 novembre",
+      "checkout": "9 novembre",
+      "notti": 1
+    },
+    {
+      "citta": "Yangshuo",
+      "nome": "",
+      "checkin": "9 novembre",
+      "checkout": "11 novembre",
+      "notti": 2
+    },
+    {
+      "citta": "Shanghai",
+      "nome": "",
+      "checkin": "11 novembre",
+      "checkout": "15 novembre",
+      "notti": 4
+    }
+  ],
+
+  "treni": [
+    {
+      "tratta": "Pechino → Xi'an",
+      "data": "3 novembre",
+      "treno": "G000",
+      "partenza": "Beijing West 00:00",
+      "arrivo": "Xi'an North 00:00",
+      "durata": "4h30",
+      "classe": "Second class",
+      "posto": "Carrozza 0, posto 00A",
+      "stazioniCn": "北京西 → 西安北",
+      "codice": "E000000000",
+      "prezzo": "¥ 000",
+      "note": "Il biglietto si ritira allo sportello col passaporto."
+    },
+    {
+      "tratta": "Xi'an → Chengdu",
+      "data": "5 novembre",
+      "durata": "circa 4h"
+    },
+    {
+      "tratta": "Chengdu → Guilin",
+      "data": "8 novembre",
+      "durata": "5–7h via Chongqing e Guiyang"
+    }
+  ],
+
+  "voli": [
+    {
+      "tratta": "Guilin → Shanghai",
+      "data": "11 novembre",
+      "volo": "XX0000",
+      "partenza": "KWL 00:00",
+      "arrivo": "PVG 00:00",
+      "durata": "2h30",
+      "codice": "XXXXXX",
+      "prezzo": "€ 000",
+      "bagaglio": "Un bagaglio da stiva incluso?",
+      "note": "Verificare se arriva a Pudong o a Hongqiao."
+    }
+  ],
+
+  "note": "Appunti liberi: qui va quello che non entra nei campi. Le righe separate da una riga vuota diventano paragrafi distinti.\n\nPer esempio: quale carta ho usato per quale prenotazione, cosa e' rimborsabile entro quando, il numero di telefono dell'agenzia."
+}
