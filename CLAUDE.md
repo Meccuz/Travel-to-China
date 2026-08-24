@@ -34,7 +34,8 @@ serve, si recupera dalla storia con `git show 6404213:index-old.html`.
 
 ## Vincoli fissi — non modificabili
 
-Voli già prenotati, conferma `C7JXI4`, Hainan Airlines. Orari sempre locali.
+Voli già prenotati, Hainan Airlines. Orari sempre locali. Il codice di conferma
+non sta qui: questo file è pubblico. Vive nei dati cifrati, sezione voli.
 
 - **Ven 30 ott** MXP 10:55 → CKG 05:00 del 31 (HU428, 11h05)
 - **Sab 31 ott** CKG 15:15 → PEK 17:40 — scalo a terra di 10h15

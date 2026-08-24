@@ -145,7 +145,9 @@
     ]
   };
 
-  var TITOLI = { hotel: 'Hotel', treni: 'Treni', voli: 'Voli interni' };
+  // "Voli" e non "Voli interni": qui vive anche il biglietto internazionale,
+  // spostato via dalla home dove il codice di conferma era in chiaro.
+  var TITOLI = { hotel: 'Hotel', treni: 'Treni', voli: 'Voli' };
 
   function el(tag, classe, testo){
     var n = document.createElement(tag);
