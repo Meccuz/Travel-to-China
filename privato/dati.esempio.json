@@ -1,15 +1,13 @@
 {
   "_come_si_usa": [
     "Copia questo file in privato/dati.local.json e riempilo con i dati veri.",
-    "dati.local.json e' in .gitignore: resta sul tuo computer, non finisce su GitHub.",
+    "dati.local.json è in .gitignore: resta sul tuo computer, non finisce su GitHub.",
     "Poi apri cifra.html, incolla il contenuto, e salva l'uscita in privato/dati.enc.json.",
-    "Ogni campo e' opzionale: quelli vuoti o assenti non vengono mostrati, quindi",
+    "Ogni campo è opzionale: quelli vuoti o assenti non vengono mostrati, quindi",
     "puoi riempire una prenotazione alla volta man mano che confermi.",
     "Le chiavi che iniziano con _ sono commenti: il sito le ignora."
   ],
-
   "aggiornato": "24 agosto 2026",
-
   "hotel": [
     {
       "citta": "Pechino",
@@ -23,7 +21,7 @@
       "codice": "ABC123456",
       "prezzo": "€ 000 totali",
       "link": "https://www.booking.com/...",
-      "note": "Metro piu' vicina, orario del check-in, colazione compresa o no."
+      "note": "Metro più vicina, orario del check-in, colazione compresa o no."
     },
     {
       "citta": "Xi'an",
@@ -61,7 +59,6 @@
       "notti": 4
     }
   ],
-
   "treni": [
     {
       "tratta": "Pechino → Xi'an",
@@ -88,7 +85,6 @@
       "durata": "5–7h via Chongqing e Guiyang"
     }
   ],
-
   "voli": [
     {
       "tratta": "Guilin → Shanghai",
@@ -103,6 +99,5 @@
       "note": "Verificare se arriva a Pudong o a Hongqiao."
     }
   ],
-
-  "note": "Appunti liberi: qui va quello che non entra nei campi. Le righe separate da una riga vuota diventano paragrafi distinti.\n\nPer esempio: quale carta ho usato per quale prenotazione, cosa e' rimborsabile entro quando, il numero di telefono dell'agenzia."
+  "note": "Appunti liberi: qui va quello che non entra nei campi. Le righe separate da una riga vuota diventano paragrafi distinti.\n\nPer esempio: quale carta ho usato per quale prenotazione, cosa è rimborsabile entro quando, il numero di telefono dell'agenzia."
 }

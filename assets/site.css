@@ -301,6 +301,9 @@
     font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",
                 "Noto Sans CJK SC","Source Han Sans SC",sans-serif;
     font-size:1.1rem;line-height:1.45;
+    /* pre-line tiene le righe scritte nel dato: nome dell'albergo sopra,
+       indirizzo sotto. Senza, textContent le fonde in un blocco unico. */
+    white-space:pre-line;
   }
 
   .pnome{
