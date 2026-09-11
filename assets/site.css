@@ -305,6 +305,9 @@
        indirizzo sotto. Senza, textContent le fonde in un blocco unico. */
     white-space:pre-line;
   }
+  /* Dentro una nota il cinese e' una stringa in mezzo al testo, non un indirizzo
+     da leggere a distanza: il corpo piu' grande la farebbe sbalzare dalla riga. */
+  .note .cn{font-size:inherit}
 
   .pnome{
     font-family:"Newsreader",serif;font-size:1.25rem;font-weight:400;

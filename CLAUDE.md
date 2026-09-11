@@ -88,6 +88,15 @@ Non riproporre queste cose senza che Michele le rimetta in discussione.
 - **Chongqing:** lo scalo di 10 ore vale circa 4 ore utili, non 10. Il sole sorge verso
   le 07:05 e prima è buio, con le luci di Hongyadong spente. Non vendere lo scalo come
   più di quello che è.
+- **Il programma del 3 e del 4 novembre resta com'era.** L'11 settembre 2026 Michele ha
+  respinto due scambi proposti: Panjiayuan resta nella mattina del 3 al posto
+  dell'osservatorio di Jianguomen, le terme di Huaqing restano nel pomeriggio del 4 al
+  posto dell'Han Yang Ling. Le avvertenze restano dove erano — Panjiayuan di martedì vale
+  una frazione del mercato del fine settimana, e la pagina continua a dirlo. Le due
+  alternative stanno nei blocchi «Fuori dagli itinerari» delle rispettive tappe, con
+  scritto perché non sono entrate: sono decisioni prese, non domande ancora aperte.
+- **Niente arrampicata a Yangshuo.** Proposta l'11 settembre 2026 e scartata subito:
+  Michele non la farà. Tolta dal sito, non rimetterla.
 - **Chengdu–Guilin è in treno, non in aereo.** L'alta velocità copre la tratta in 5–7 ore
   via Chongqing e Guiyang, con una ventina di partenze al giorno da Chengdu East a Guilin
   North. Un precedente appunto parlava di 9 ore di treno: era sbagliato. Niente notturno:
@@ -99,10 +108,10 @@ Non riproporre queste cose senza che Michele le rimetta in discussione.
 1. **Muraglia:** Mutianyu (comoda, funivia, affollata) o Jinshanling (3 ore da Pechino,
    tratti non restaurati, quasi deserta). Non deciso.
 2. **Il giorno recuperato da Longji:** ora a Chengdu, l'alternativa è Yangshuo.
-3. **Panjiayuan è in programma di martedì, e il mercato vero è quello del fine
-   settimana.** In settimana resta una frazione delle bancarelle, e l'unico slot
-   alternativo è la domenica della Città Proibita. Probabilmente da togliere.
-4. **Alloggi:** nessuna delle sei città ha un hotel scelto. È il buco più grande.
+3. **Il museo della fantascienza di Zaha Hadid a Chengdu** non ha aperture pubbliche
+   confermate. Segnalato sul sito come da verificare, non messo in programma.
+4. **La terrazza del Raffles City a Chongqing**: l'orario di apertura non è verificato,
+   e con la ripartenza alle 11:00 decide se la voce sta in piedi o no.
 
 ## La sezione privata
 
@@ -154,14 +163,22 @@ rendersi sempre, e nessun subset di venti glifi può coprire un indirizzo
 qualunque. La classe `.cn` usa di proposito il font di sistema, che sui telefoni
 c'è sempre. Non è una dimenticanza e non va "corretta" rigenerando il subset.
 
+La stessa classe vale per le stringhe cinesi che si incollano invece di leggerle:
+il nome della mini-app WeChat del Robot Mall (`亦庄机器人`, in `tappe/pechino.html`)
+sta in un `<span class="cn">` per lo stesso motivo. Se ne aggiungi altre, o stanno
+in `.cn` o vanno nel subset: non c'è una terza via.
+
 **La passphrase non si scrive qui.** Questo file è committato su un repo pubblico:
 annotarla accanto al meccanismo che chiude vanificherebbe tutto. Vive nel gestore
 di password di Michele e da nessun'altra parte.
 
-**Nota di stato.** `privato/dati.enc.json` contiene il modello, non prenotazioni
-vere: al 24 agosto 2026 nessuno dei sei hotel è scelto, e treni e volo interno non
-sono comprati. La pagina è pronta, i dati mancano. Man mano che si confermano si
-riempie `dati.local.json` e si rifà il giro con `cifra.html`.
+**Nota di stato.** All'11 settembre 2026 tutti e sei gli hotel sono prenotati, e
+con loro il volo interno Guilin–Shanghai. Restano da comprare i tre treni.
+
+`dati.local.json` contiene già anche Shanghai, ma
+**`dati.enc.json` è fermo alla revisione precedente**: la ricifratura si fa solo a
+mano, perché la passphrase non è in questo repo e non passa da nessun agent. Finché
+Michele non rifà il giro con `cifra.html`, la pagina privata mostra Shanghai vuoto.
 
 ## Convenzioni del sito
 
@@ -187,6 +204,14 @@ La classe `.stop.air` cambia il tratto e va sulla tappa **da cui parte** la trat
 quella in cui arriva. Va riverificata ogni volta che l'itinerario cambia mezzo: era
 sbagliata su tre tappe su otto. Non aggiungere altri elementi decorativi: la sobrietà
 è voluta.
+
+**«Fuori dagli itinerari».** Cinque pagine di tappa su sei hanno una `<section id="fuori">`
+con le cose che gli itinerari standard non mettono, subito dopo il programma e prima delle
+note logistiche. Guilin e Yangshuo non ce l'ha: l'unica voce che aveva è stata scartata. Le voci hanno tre stati e si distinguono senza CSS nuovo: **verificate**
+sono normali `.card` nella `.grid`, **con attrito** e **da verificare** sono `.note.warn`
+sotto la griglia, con lo stato scritto nel grassetto d'apertura. L'introduzione della
+sezione dice la convenzione una volta sola. Non addolcire le voci in rosso: il valore
+di quelle segnalazioni sta proprio nel dire cosa può non funzionare.
 
 **localStorage.** Su GitHub Pages funziona, e ci vivono la checklist (`cina2026:check:<k>`)
 e le note di ogni pagina (`cina2026:nota:<id>`). Vale solo su quel dispositivo e in quel
