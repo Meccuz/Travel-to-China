@@ -175,10 +175,14 @@ di password di Michele e da nessun'altra parte.
 **Nota di stato.** All'11 settembre 2026 tutti e sei gli hotel sono prenotati, e
 con loro il volo interno Guilin–Shanghai. Restano da comprare i tre treni.
 
-`dati.local.json` contiene già anche Shanghai, ma
-**`dati.enc.json` è fermo alla revisione precedente**: la ricifratura si fa solo a
-mano, perché la passphrase non è in questo repo e non passa da nessun agent. Finché
-Michele non rifà il giro con `cifra.html`, la pagina privata mostra Shanghai vuoto.
+L'11 ottobre 2026 `dati.enc.json` è stato ricifrato e contiene anche Shanghai. La
+ricifratura si fa solo a mano, perché la passphrase non è in questo repo e non passa
+da nessun agent: ogni modifica a `dati.local.json` resta invisibile online finché
+Michele non rifà il giro con `cifra.html`.
+
+Per capire se il blob è allineato senza la passphrase: la lunghezza di `ct`
+decodificato da base64 è uguale ai byte di `dati.local.json` più 16, il tag di GCM.
+Se i numeri non tornano, il blob è vecchio o è stato cifrato un testo diverso.
 
 ## Convenzioni del sito
 
