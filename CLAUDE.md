@@ -118,12 +118,9 @@ Non riproporre queste cose senza che Michele le rimetta in discussione.
    confermate. Segnalato sul sito come da verificare, non messo in programma.
 3. **La terrazza del Raffles City a Chongqing**: l'orario di apertura non è verificato,
    e con la ripartenza alle 11:00 decide se la voce sta in piedi o no.
-4. **Pechino e Xi'an non sono ancora allineate ai tour.** Le pagine descrivono ancora la
-   scelta fra Mutianyu e Jinshanling, e la Città Proibita da prenotare da soli sette
-   giorni prima. Ora i biglietti li compra l'agenzia, e se sono esauriti rimborsa.
-5. **Terme di Huaqing il 4 pomeriggio.** Il sito le mette «sulla strada del ritorno» dalle
-   fosse, ma il tour della Terracotta riporta in hotel verso le 14:00, e Huaqing sta a
-   Lintong, a un'ora dal centro. La decisione dell'11 settembre va rivista con Michele.
+4. **Terme di Huaqing il 4 pomeriggio.** Il tour della Terracotta riporta in hotel
+   verso le 14:00, e Huaqing sta a Lintong, a un'ora dal centro. Per ora la pagina dice di
+   chiedere alla guida di lasciarvi alle Terme dopo pranzo. Da rivedere con Michele.
 
 ## La sezione privata
 
