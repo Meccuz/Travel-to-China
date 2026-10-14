@@ -62,7 +62,7 @@ Deriva da un itinerario kimkim "Classic China Family Trip 15 days", adattato.
 | 31 ott, mattina | Chongqing (scalo) | — |
 | 31 ott – 3 nov | Pechino | 3 |
 | 3 – 5 nov | Xi'an | 2 |
-| 5 – 8 nov | Chengdu (con Leshan) | 3 |
+| 5 – 8 nov | Chengdu (con Emei e Leshan) | 3 |
 | 8 – 9 nov | Guilin | 1 |
 | 9 – 11 nov | Yangshuo | 2 |
 | 11 – 15 nov | Shanghai | 4 |
@@ -102,20 +102,32 @@ Non riproporre queste cose senza che Michele le rimetta in discussione.
   North. Un precedente appunto parlava di 9 ore di treno: era sbagliato. Niente notturno:
   l'unico cuccetta sulla linea è il Guangzhou–Chengdu, che passa da Guilin nel cuore
   della notte.
+- **Quattro giornate sono tour di gruppo GetYourGuide**, prenotati a ottobre 2026:
+  Città Proibita domenica 1 novembre, Muraglia lunedì 2, Terracotta mercoledì 4, Emei e
+  Leshan venerdì 6. Orari, ritrovi e codici stanno nei dati cifrati. Il programma di quei
+  giorni lo decide l'agenzia, non il sito.
+- **Muraglia: Mutianyu.** Deciso con la prenotazione del tour del 2 novembre. Jinshanling
+  non è più un'opzione.
+- **Il 6 novembre è Emei più Leshan, in bus.** Non più Leshan da soli in treno. Emei sale
+  oltre i 3000 metri: la pagina di Chengdu e la sezione abbigliamento avvisano del freddo.
 
 ## Ancora aperto
 
-1. **Muraglia:** Mutianyu (comoda, funivia, affollata) o Jinshanling (3 ore da Pechino,
-   tratti non restaurati, quasi deserta). Non deciso.
-2. **Il giorno recuperato da Longji:** ora a Chengdu, l'alternativa è Yangshuo.
-3. **Il museo della fantascienza di Zaha Hadid a Chengdu** non ha aperture pubbliche
+1. **Il giorno recuperato da Longji:** ora a Chengdu, l'alternativa è Yangshuo.
+2. **Il museo della fantascienza di Zaha Hadid a Chengdu** non ha aperture pubbliche
    confermate. Segnalato sul sito come da verificare, non messo in programma.
-4. **La terrazza del Raffles City a Chongqing**: l'orario di apertura non è verificato,
+3. **La terrazza del Raffles City a Chongqing**: l'orario di apertura non è verificato,
    e con la ripartenza alle 11:00 decide se la voce sta in piedi o no.
+4. **Pechino e Xi'an non sono ancora allineate ai tour.** Le pagine descrivono ancora la
+   scelta fra Mutianyu e Jinshanling, e la Città Proibita da prenotare da soli sette
+   giorni prima. Ora i biglietti li compra l'agenzia, e se sono esauriti rimborsa.
+5. **Terme di Huaqing il 4 pomeriggio.** Il sito le mette «sulla strada del ritorno» dalle
+   fosse, ma il tour della Terracotta riporta in hotel verso le 14:00, e Huaqing sta a
+   Lintong, a un'ora dal centro. La decisione dell'11 settembre va rivista con Michele.
 
 ## La sezione privata
 
-Hotel, treni e voli interni stanno in `privato.html`, fuori dalle pagine pubbliche.
+Hotel, treni, voli e attività stanno in `privato.html`, fuori dalle pagine pubbliche.
 
 **Perché è cifrata e non protetta da password.** Il sito è statico e il repo è
 pubblico: non esiste nessun server che possa rifiutare una richiesta. Una password
@@ -158,7 +170,7 @@ già caricata.
   `.reveal` resterebbe a `opacity:0`, cioè invisibile.
 
 **Deroga voluta alla regola del subset dei font.** Gli indirizzi in cinese
-(`indirizzoCn`, `stazioniCn`) sono la cosa che si mostra al tassista: devono
+(`indirizzoCn`, `stazioniCn`, `ritrovoCn`) sono la cosa che si mostra al tassista: devono
 rendersi sempre, e nessun subset di venti glifi può coprire un indirizzo
 qualunque. La classe `.cn` usa di proposito il font di sistema, che sui telefoni
 c'è sempre. Non è una dimenticanza e non va "corretta" rigenerando il subset.
@@ -175,7 +187,11 @@ di password di Michele e da nessun'altra parte.
 **Nota di stato.** All'11 settembre 2026 tutti e sei gli hotel sono prenotati, e
 con loro il volo interno Guilin–Shanghai. Restano da comprare i tre treni.
 
-L'11 ottobre 2026 `dati.enc.json` è stato ricifrato e contiene anche Shanghai. La
+Al 14 ottobre 2026 sono prenotate anche le quattro attività. Tre sono «prenota ora,
+paga dopo» con addebito automatico il 29 ottobre, il 30 ottobre e il 1° novembre: il
+biglietto compare nell'app solo dopo il pagamento.
+
+Il 14 ottobre 2026 `dati.enc.json` è stato ricifrato con le attività. La
 ricifratura si fa solo a mano, perché la passphrase non è in questo repo e non passa
 da nessun agent: ogni modifica a `dati.local.json` resta invisibile online finché
 Michele non rifà il giro con `cifra.html`.
