@@ -1,4 +1,4 @@
-/* Sezione privata: hotel, treni e voli interni.
+/* Sezione privata: hotel, treni, voli e attivita'.
 
    Il sito e' statico e il repo e' pubblico, quindi non esiste nessun server che
    possa rifiutare una richiesta: qualunque cosa il browser sa scaricare, la sa
@@ -142,12 +142,23 @@
       ['bagaglio',    'Bagaglio'],
       ['link',        'Prenotazione', 'link'],
       ['note',        'Note']
+    ],
+    attivita: [
+      ['orario',      'Orario', 'mono'],
+      ['durata',      'Durata', 'mono'],
+      ['ritrovo',     'Ritrovo'],
+      ['ritrovoCn',   'Da mostrare al tassista', 'cn'],
+      ['telefono',    'Telefono', 'mono'],
+      ['codice',      'Codice prenotazione', 'mono'],
+      ['prezzo',      'Prezzo', 'mono'],
+      ['link',        'Prenotazione', 'link'],
+      ['note',        'Note']
     ]
   };
 
   // "Voli" e non "Voli interni": qui vive anche il biglietto internazionale,
   // spostato via dalla home dove il codice di conferma era in chiaro.
-  var TITOLI = { hotel: 'Hotel', treni: 'Treni', voli: 'Voli' };
+  var TITOLI = { hotel: 'Hotel', treni: 'Treni', voli: 'Voli', attivita: 'Attività' };
 
   function el(tag, classe, testo){
     var n = document.createElement(tag);
@@ -199,7 +210,7 @@
     var occhiello = tipo === 'hotel'
       ? [voce.citta, periodo(voce)].filter(Boolean).join(' · ')
       : [voce.data, voce.citta].filter(Boolean).join(' · ');
-    var titolo = tipo === 'hotel' ? voce.nome : voce.tratta;
+    var titolo = tipo === 'hotel' || tipo === 'attivita' ? voce.nome : voce.tratta;
 
     if(occhiello){ card.appendChild(el('h4', null, occhiello)); }
     if(titolo){ card.appendChild(el('p', 'pnome', titolo)); }
@@ -255,7 +266,7 @@
   function mostra(dati, dove){
     dove.textContent = '';
 
-    ['hotel','treni','voli'].forEach(function(tipo){
+    ['hotel','treni','voli','attivita'].forEach(function(tipo){
       if(!dati[tipo]){ return; }
       dove.appendChild(sezione(tipo, dati[tipo]));
     });

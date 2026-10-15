@@ -99,5 +99,21 @@
       "note": "Verificare se arriva a Pudong o a Hongqiao."
     }
   ],
+  "attivita": [
+    {
+      "citta": "Chengdu",
+      "data": "6 novembre",
+      "nome": "Nome del tour o dell'attività",
+      "orario": "06:00",
+      "durata": "11h",
+      "ritrovo": "Via e numero del punto di ritrovo",
+      "ritrovoCn": "成都市…",
+      "telefono": "+86 000 0000 0000",
+      "codice": "ABC123 · PIN 0000",
+      "prezzo": "€ 000",
+      "link": "https://www.getyourguide.com/...",
+      "note": "Chi contatta chi e quando, cosa portare, fino a quando si cancella gratis."
+    }
+  ],
   "note": "Appunti liberi: qui va quello che non entra nei campi. Le righe separate da una riga vuota diventano paragrafi distinti.\n\nPer esempio: quale carta ho usato per quale prenotazione, cosa è rimborsabile entro quando, il numero di telefono dell'agenzia."
 }
