@@ -110,6 +110,10 @@ Non riproporre queste cose senza che Michele le rimetta in discussione.
   non è più un'opzione.
 - **Il 6 novembre è Emei più Leshan, in bus.** Non più Leshan da soli in treno. Emei sale
   oltre i 3000 metri: la pagina di Chengdu e la sezione abbigliamento avvisano del freddo.
+- **La crociera sul fiume Li è prenotata con l'hotel di Guilin**, via WhatsApp, il 19
+  ottobre 2026. Partenza alle 9:30, auto dell'hotel fino al molo, quattro ore di
+  navigazione, pranzo a bordo, valigie a bordo. Si sbarca al molo di Longtoushan a
+  Yangshuo e da lì si va in taxi all'hotel. Prezzo e contatto stanno nei dati cifrati.
 
 ## Ancora aperto
 
@@ -182,7 +186,8 @@ annotarla accanto al meccanismo che chiude vanificherebbe tutto. Vive nel gestor
 di password di Michele e da nessun'altra parte.
 
 **Nota di stato.** All'11 settembre 2026 tutti e sei gli hotel sono prenotati, e
-con loro il volo interno Guilin–Shanghai. Restano da comprare i tre treni.
+con loro il volo interno Guilin–Shanghai. Il 15 ottobre 2026 i tre treni sono in
+richiesta su Trip.com, che li compra appena apre la vendita: non ancora confermati.
 
 Al 14 ottobre 2026 sono prenotate anche le quattro attività. Tre sono «prenota ora,
 paga dopo» con addebito automatico il 29 ottobre, il 30 ottobre e il 1° novembre: il
